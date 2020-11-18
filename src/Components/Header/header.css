@@ -1,0 +1,8 @@
+.header {
+    width: 100%;
+    height: 165px;
+    background-color: #c5dbf3;
+    font-family: "Open Sans", Zoram, "noto sans", Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+}

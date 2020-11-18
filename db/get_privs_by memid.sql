@@ -1,0 +1,1 @@
+SELECT * FROM purchase_detail WHERE memid = $1;

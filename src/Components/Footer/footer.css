@@ -1,0 +1,83 @@
+.footer-main {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    min-height: 150px;
+    background-image: url(../../images/footer-bg.jpg);
+  }
+  .footer-form {
+    height: 60px;
+    width: 100%;
+    padding: 20px 0;
+    font-family: "Open sans";
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .footer-form-fields {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+  }
+  .footer-form-title {
+    margin: 0 10px;
+  }
+  
+  .footer-form-field {
+    background-color: #fff;
+    height: 36px;
+    width: 280px;
+    font-size: 18px;
+    margin: 0 10px;
+    border-radius: 4%;
+  }
+  
+  .footer-form-field > input {
+    border: none;
+  }
+  
+  .footer-form-button {
+    height: 18px;
+    width: 120px;
+    background: #8d003f;
+    border-radius: 8%;
+    color: #fff;
+    font-size: 16px;
+    padding: 9px 0;
+  }
+  
+  .footer-form-contact-us {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 15px;
+    font-family: "Open sans";
+    font-weight: 300;
+  }
+  
+  .footer-contact-us {
+    margin: 0 20px;
+  }
+  
+  .footer-faq {
+    margin: 0 20px;
+  }
+  
+  .footer-form-contact-us > a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .footer-form-contact-us > a:visited {
+    text-decoration: none;
+    color: #fff;
+  }
+  .footer-form-contact-us > a:active {
+    text-decoration: none;
+    color: #fff;
+  }
+  

@@ -1,0 +1,227 @@
+.navbar {
+    width: 100%;
+    height: 165px;
+    background-color: #c5dbf3;
+    font-family: "Open Sans", Zoram, "noto sans", Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+  }
+  
+  .fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+  //Company Stuff
+  .company-container {
+    margin-top: 40px;
+    margin-left: 15%;
+    padding-left:10%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: space-around;
+  }
+  
+  .c-logo {
+    width: 550px;
+    margin-left:25px;
+    margin-top:12px;
+  }
+  
+  .c-tag {
+    height: 70%;
+  }
+  
+  //Menu button
+  
+  .menu-box {
+    position: absolute;
+    z-index: 3;
+    right: 15%;
+    top: 20px;
+    height: 60px;
+    width: 23%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    color: #fff;
+    font-weight: 300;
+  }
+  
+  .menu-header-date {
+    height: 60px;
+    font-size: 18px;
+    margin-right: 30px;
+    margin-top: 3px;
+  }
+  
+  .menu-items-holder {
+    width: 5%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+  }
+  
+  .menu-header-word {
+    width: 60px;
+    letter-spacing: 1.6;
+    font-size: 16px;
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+  
+  .menu-btn {
+    margin-top: 7px;
+    height: 15px;
+    cursor: pointer;
+    @include easeOut;
+  
+    .btn-line {
+      width: 15px;
+      height: 1.5px;
+      margin: 0 0 3px 0;
+      background: #fff;
+      @include easeOut;
+    }
+  
+    //Rotate into X with Menu Lines
+  
+    &.close {
+      transform: rotate(180deg);
+      transform-origin: 8px 3px;
+  
+      .btn-line {
+        //line 1 rotate
+        &:nth-child(1) {
+          transform: rotate(45deg) translate(1px, -1px);
+        }
+        //line 2 hide
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        //line 3 rotate
+        &:nth-child(3) {
+          transform: rotate(-45deg) translate(7px, -6px);
+        }
+      }
+    }
+  }
+  
+  .navbar > section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    color: white;
+    margin: 0 auto;
+  }
+  
+  nav {
+    display: none;
+    justify-content: space-evenly;
+    width: 300px;
+  }
+  
+  .dropdown {
+    position: fixed;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    font-family: "Open sans";
+    border: solid 1px rgb(197, 193, 193);
+    z-index: -1;
+    background-color: #fff;
+    color: #8d003f;
+    height: 0;
+    overflow: hidden;
+    @include easeOut;
+  }
+  
+  .dropDownNoShow {
+    height: 0;
+  }
+  
+  .dropDownShow {
+    min-height: 400px;
+  }
+  
+  .navbar-header-links {
+    width: 70%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20px;
+    margin: 20px 15% 30px 15%;
+    padding-top: 30px;
+    line-height: 32px;
+    font-weight: 300;
+    border-bottom: 1px solid rgb(197, 193, 193);
+  }
+  
+  .navbar-header-link-words {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .navbar-header-link-word {
+    margin: 0 15px 20px 10px;
+  }
+  
+  .navbar-icons {
+    margin-left: 20%;
+  
+    i {
+      margin: 0 10px;
+    }
+  }
+  
+  .navbar-body-wrapper {
+    font-size: 18px;
+  }
+  
+  .navbar-column-link-wrapper {
+    width: 70%;
+    margin: 20px 15%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-weight: 300;
+    color: #8d003f;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .navbar-column-link-box {
+    width: 260px;
+    margin: 10px 5px 20px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navbar-column-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+  }
+  .navbar-column-link {
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 5px 0;
+    cursor: pointer;
+  }
+  .navbar-column-link:hover {
+    color: $primary-color;
+  }
+  
