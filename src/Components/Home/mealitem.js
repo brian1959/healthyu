@@ -56,7 +56,7 @@ return (
         {props.mealtypeName === "Immune"? (<button> <a href="./#/immune">Go to Immune</a></button>):
 ( props.mealtypeName === "Picky Eaters"? (<button> <a href="./#/pickyeaters">Go to Picky Eaters</a></button>):(
     
-        checkout ? ( <PayPal desc={props.mealtypeName} amnt={props.mealtypeCost}/>
+        checkout ? ( <PayPal desc={props.mealtypeName} amnt={props.mealtypeCost} items={[""]}/>
         ):(
             <button onClick={()=> {setCheckOut(true)}}>Purchase</button>
         )       )  ) }

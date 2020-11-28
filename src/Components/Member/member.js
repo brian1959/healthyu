@@ -21,7 +21,7 @@ class Profile extends Component {
       this.setState({ member: response.data[0] });
     });
 
-    axios.get("/api/memberpurchases").then(purchases => {
+    axios.get("/api/memberprivs").then(purchases => {
       this.setState({ mypurchases: purchases.data });
     });
   }
@@ -46,7 +46,7 @@ class Profile extends Component {
       mphone,
       memail
     } = member;
-
+console.log("purchase detail", mypurchases)
     return (
       <div className="member-wrapper">
         <div className="member-details-wrapper">
@@ -87,8 +87,10 @@ class Profile extends Component {
             <div className="my-purchases-details-wrapper">
               {mypurchases.map(eachpurchase => (
                 <Mypurchases
-                  key={eachpurchase.purid}
+                  key={eachpurchase.detailid}
+                  ordernum={eachpurchase.ppid}
                   purchasetitle={eachpurchase.puritem}
+                  purchasecost={eachpurchase.stdcost}
                 />
               ))}
             </div>

@@ -97,10 +97,11 @@ function envCheck(req, res, next) {
   }
 }
 
-app.get('/api/guestprivs', mc.getGuestPrivs);
+app.get('/api/memberprivs', mc.getMemberPrivs);
 app.get("/api/member", gc.getMember);
 //app.get("/api/user", gc.getGuestID);
-
+app.post("/api/orderheader", mc.addOrderHeader);
+app.post("/api/orderdetail", mc.addOrderDetail);
 
 //end of session logging
 

@@ -1,4 +1,4 @@
-create table order_header  (Orderid Serial Primary Key, ppid VARCHAR, memid INT, purcost INT, purdate TIMESTAMP);
+create table order_header  (Orderid Serial Primary Key, ppid VARCHAR, memid INT, purcost INT, purdate TIMESTAMP DEFAULT now());
 
 insert into order_header (memid, ppid, purcost, purdate)
 

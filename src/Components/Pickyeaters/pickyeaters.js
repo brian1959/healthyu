@@ -90,6 +90,7 @@ export default class Pickyeaters extends Component {
 
     console.log("meal cost",this.state.mealAdjTotal)
     console.log("meal type",this.state.displayMealType)
+    console.log("cost array",this.state.displayMealCost)
 
     return (
       <div className="nibble-main">
@@ -310,7 +311,7 @@ export default class Pickyeaters extends Component {
         </div>
         <br />
         <center>
-       { this.state.checkout ? ( <PayPal desc={this.state.purDesc} amnt={this.state.mealAdjTotal}/>
+       { this.state.checkout ? ( <PayPal desc={this.state.purDesc} amnt={this.state.mealAdjTotal} items={this.state.displayMealType}/>
         ):(
             <button onClick={()=> {this.handleCheckOut()}}>Purchase</button>
         )       }        

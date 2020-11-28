@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, {useRef,  useEffect} from "react";
 
 export default function Paypal(props) {
@@ -21,7 +22,14 @@ useEffect(()=> {
         },
 onApprove: async (data, actions) => {
     const order = await actions.order.capture();
-     console.log("order info", order.purchase_units[0].description)
+    const amount = props.amnt
+    const oid = order.id
+    const meals = props.items
+    const idesc = props.desc
+    axios.post('./api/orderheader',{oid,amount})
+    axios.post('./api/orderdetail',{meals,oid, idesc})
+    console.log("order id", order.id)
+    console.log("order info", order.purchase_units[0])
 },
 onError: (err) => {
 
@@ -30,7 +38,7 @@ onError: (err) => {
     })
     .render(paypal.current)
   
-}, [props.desc, props.amnt])
+}, [props.desc, props.amnt, props.items])
 
     return(
 
