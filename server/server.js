@@ -61,7 +61,7 @@ app.get("/auth/callback", async (req, res) => {
 		);
 		console.log("User", resWithUserData.data);
 
-		let { email, name, picture, sub } = resWithUserData.data;
+		let { email, given_name, family_name, sub } = resWithUserData.data;
 		let db = app.get("db");
 		let foundUser = await db.find_user([sub]);
 		if (foundUser[0]) {
@@ -69,7 +69,7 @@ app.get("/auth/callback", async (req, res) => {
 			req.session.user = foundUser[0];
 			res.redirect("/#/member");
 		} else {
-			let createdUser = await db.create_user(name, email, picture, sub);
+			let createdUser = await db.create_user(given_name, family_name, email, sub);
 			console.log("User", createdUser[0]);
 			req.session.user = createdUser[0];
 			res.redirect("/#/pickyeater");
