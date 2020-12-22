@@ -72,7 +72,7 @@ app.get("/auth/callback", async (req, res) => {
 			let createdUser = await db.create_user(given_name, family_name, email, sub);
 			console.log("User", createdUser[0]);
 			req.session.user = createdUser[0];
-			res.redirect("/#/pickyeater");
+			res.redirect("/#/pickyeaters");
 		}
 	} catch (err) {
 		console.log(err);
