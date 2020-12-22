@@ -1,0 +1,6 @@
+{
+	"ignore": ["src"],
+	"env": {
+		"NODE_ENV": "development"
+	}
+}
