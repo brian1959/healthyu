@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import logo from "../../images/hu2logo.png";
 import HealthyU from "../../images/HealthyU.png";
 import tagline from "../../images/hutagline.png";
+import Login from "../Login/login";
+import axios from "axios";
 import onClickOutside from "react-onclickoutside";
 
 class Navbar extends Component {
@@ -12,6 +14,13 @@ class Navbar extends Component {
     this.state = {
       menuShow: false,
     };
+  }
+
+  componentDidMount(){
+
+    axios.get("/api/accessprivs").then(purchases => {
+      this.setState({ mypurchases: purchases.data});
+    });
   }
 
   showMenu() {
@@ -33,6 +42,7 @@ class Navbar extends Component {
   }
 
   render() {
+    console.log("Purchases", this.state.mypurchases)
     return (
       <div>
         <div className="navbar fixed-top">
@@ -41,6 +51,9 @@ class Navbar extends Component {
             <div className="companywrapper">
               <img className="c-company" src={HealthyU} alt="Healthy U" />
               <img className="c-tag" src={tagline} alt="tag line" />
+            </div>
+            <div className="login-box">
+            <Login/>
             </div>
             <div className="menu-box">
               <div className="menu-items-holder">

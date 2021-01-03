@@ -3,12 +3,14 @@ const express = require("express");
 const massive = require("massive");
 const session = require("express-session");
 const axios = require("axios");
-//const cors = require("cors");
+const cors = require("cors");
 
 const mc = require("./meal_controller");
 const gc = require("./member_controller");
 
 const app = express();
+
+//db connection
 
 const {
 	SERVER_PORT,
@@ -20,23 +22,27 @@ const {
 	NODE_ENV,
 } = process.env;
 
-app.use(
-	session({
-		secret: SESSION_SECRET,
-		resave: false,
-		saveUninitialized: false,
-	})
-);
-
-app.use(express.json());
-//app.use(cors());
-
 massive(CONNECTION_STRING)
 	.then((db) => {
 		app.set("db", db);
 		console.log("DB connected");
 	})
 	.catch((err) => console.log(err));
+
+//end db connection
+
+app.use(express.json());
+app.use(cors());
+
+//session functionality
+
+app.use(
+	session({
+		secret: SESSION_SECRET,
+		resave: false,
+		saveUninitialized: true
+	})
+);
 
 app.get("/auth/callback", async (req, res) => {
 	//use code from query in payload for token
@@ -48,7 +54,6 @@ app.get("/auth/callback", async (req, res) => {
 		redirect_uri: `http://${req.headers.host}/auth/callback`,
 	};
 	//trade the code for a token
-	console.log("Payload", payload);
 
 	try {
 		let resWithToken = await axios.post(
@@ -65,12 +70,12 @@ app.get("/auth/callback", async (req, res) => {
 		let db = app.get("db");
 		let foundUser = await db.find_user([sub]);
 		if (foundUser[0]) {
-			console.log("User", foundUser[0]);
 			req.session.user = foundUser[0];
+			console.log("ReqUser", req.session.user);
 			res.redirect("/#/member");
 		} else {
 			let createdUser = await db.create_user(given_name, family_name, email, sub);
-			console.log("User", createdUser[0]);
+			console.log("NewUser", createdUser[0]);
 			req.session.user = createdUser[0];
 			res.redirect("/#/pickyeaters");
 		}
@@ -92,14 +97,31 @@ function envCheck(req, res, next) {
 		next();
 	}
 }
+app.get("/api/user-data", envCheck, (req, res) => {
+
+	if (req.session.user) {
+	  res.status(200).send(req.session.user);
+	  console.log("reqUser",req.session.user)
+	} else {
+	  res.status(401).send("Unauthorized");
+	}
+
+  });
+  
+  app.get("/auth/logout", (req, res) => {
+	req.session.destroy();
+	res.redirect(process.env.REACT_APP_REDIRECT);
+  });
+  //end of session logging
 
 app.get("/api/memberprivs", mc.getMemberPrivs);
 app.get("/api/member", gc.getMember);
-//app.get("/api/user", gc.getGuestID);
+app.get("/api/accessprivs", mc.getAccessPrivs);
 app.post("/api/orderheader", mc.addOrderHeader);
 app.post("/api/orderdetail", mc.addOrderDetail);
 
 //end of session logging
+
 
 app.listen(SERVER_PORT, () => {
 	console.log(`Server evesdropping on port ${SERVER_PORT}.`);

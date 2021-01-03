@@ -16,7 +16,7 @@ export default class Women extends Component {
           <div className="inst-vids-container">
             <div className="inst-vids-wrapper">
               <div className="snk-vids">
-               <iframe height="100%" title="Women" src="https://drive.google.com/file/d/1mTjB8b7exfyljoyqlbXFK7Vqor4DSfSZ/preview"/><h2>For Women Specifically</h2>
+               <iframe title="Women" src="https://drive.google.com/file/d/1mTjB8b7exfyljoyqlbXFK7Vqor4DSfSZ/preview"/><h2>For Women Specifically</h2>
                 
               </div>
             </div>

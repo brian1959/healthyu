@@ -1,7 +1,7 @@
 import React from "react";
 import MealType from './mealitem';
 import {mealtypeData} from './productdata';
-import Login from "../Login/login";
+
 
 function Home() {
        document.title = "Healthy U";
@@ -10,16 +10,13 @@ function Home() {
     return (
 
       <div className="landing">
-
         <div className="landing-hero">
           <div className="landing-herovid">
           <iframe
-                 height="100%"
-                 width="100%"
                   title="Welcome"
                    src="https://drive.google.com/file/d/1Agkpz2NNJrhbT6ULsSJRxh1ioSS7ZokT/preview?start=1" allow="fullscreen" />
           </div>
-          <a href="https://nutritionstudies.org/courses/plant-based-nutrition/" title="Plant-based Nutrition Certificate Badge"><img src="https://nutritionstudies.org/images/graduate-badge.png" width="250" alt="Grad Badge"/></a>
+          <a href="https://nutritionstudies.org/courses/plant-based-nutrition/" title="Plant-based Nutrition Certificate Badge"><img src="https://nutritionstudies.org/images/graduate-badge.png" width="150" alt="Grad Badge"/></a>
           <div className="overlay-promo">Eat your way to a better life</div>
           <div className="overlay-promo-text">
             Welcome to the HealthyU2 website! This site was created to help you
@@ -38,7 +35,7 @@ function Home() {
             and those over 50. I’m so happy you stopped by! I'm thrilled to help
             you discover life-changing information in small bites!
           </div>
-          <Login/>
+        
         </div>
         <section className="land-meal-type">
           <div className="prep-title">How hungry are you?</div>
@@ -49,6 +46,7 @@ function Home() {
     mealtypeImage={mealtype.mtimage}
     mealtypeName ={mealtype.mtname}
     mealtypeBody={mealtype.mtbody}
+    mealtypeTcost={mealtype.cost}
     mealtypeCost={mealtype.mtcost}
     />
   ))}

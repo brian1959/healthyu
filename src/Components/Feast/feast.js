@@ -36,14 +36,13 @@ export default class Feast extends Component {
                 <h2>Week 1</h2>
                 <br />
                 <iframe
-                  width="100%"
                   title="What's the best option"
                   src="https://drive.google.com/file/d/1KAwxMe40HrzIyWmHmDz6iGiTLjr3t0wM/preview" allow="fullscreen"
                 />
                 <h2>What's the best Option?</h2>
                 <br />
                 <iframe
-                  width="100%"
+
                   title="Grocery Food Tour"
                   src="https://drive.google.com/file/d/1omDfIH3s90f0o8PVQ0ftwSi2jYRbkeow/preview" allow="fullscreen"
                 />
@@ -51,14 +50,14 @@ export default class Feast extends Component {
               </div>
               <div className="inst-vids">
                 <iframe
-                  width="100%"
+
                   title="Shift Perspective"
                   src="https://drive.google.com/file/d/1Rh-Fq4JpBiT5hk5gLLBFOdPdq5hgvxLd/preview" allow="fullscreen"
                 />
                 <h2>Shift Your Perspective </h2>
                 <br />
                 <iframe
-                  width="100%"
+                  
                   title="Oats"
                   src="https://drive.google.com/file/d/13Rj3M6HAU8fApMIglo9X45BPPSIenc44/preview" allow="fullscreen"
                 />
@@ -66,14 +65,14 @@ export default class Feast extends Component {
               </div>
               <div className="inst-vids">
                 <iframe
-                  width="100%"
+                  
                   title="Let's Explore"
                   src="https://drive.google.com/file/d/1IaVXAXdCSLVKlBG2CdwjADM6GPrigajW/preview" allow="fullscreen"
                 />
                 <h2>Let's Explore What You Love to Eat</h2>
                 <br />
                 <iframe
-                  width="100%"
+                  
                   title="Beans"
                   src="https://drive.google.com/file/d/1-STConyxUyumAhb0N9BoUtiLbITZhfLh/preview" allow="fullscreen"
                 />
@@ -85,14 +84,14 @@ export default class Feast extends Component {
               </div>
               <div className="inst-vids">
                 <iframe
-                  width="100%"
+                  
                   title="Winning Strategy"
                   src="https://drive.google.com/file/d/1TSYvNpNE7uHS1Alj7ftvNW8GA1xyZua9/preview" allow="fullscreen"
                 />
                 <h2>Winning Strategy</h2>
                 <br />
                 <iframe
-                  width="100%"
+                  
                   title="Minestrone"
                   src="https://drive.google.com/file/d/1l4WZl2TS9JVUnUxFhTnqAjNnzruKadgZ/preview" allow="fullscreen"
                 />
@@ -104,28 +103,28 @@ export default class Feast extends Component {
                 <h2>Week 2</h2>
                 <br />
                 <iframe
-                  width="100%"
+                  
                   title="Got Gas?"
                   src="https://drive.google.com/file/d/1T4tzqmVPIgU7jTG6T4_p_j2K9XY2EO3Z/preview" allow="fullscreen"
                 />
                 <h2>Got Gas? </h2>
                 <br />
                 <iframe
-                  width="100%"
+                  
                   title="Pancakes"
                   src="https://drive.google.com/file/d/16TqDmhg95G578uLXTWHXRp49pzQ5KjhC/preview" allow="fullscreen"/>
                 <h2>Pancakes/Berry Sauce</h2>
               </div>
               <div className="inst-vids">
                 <iframe
-                  width="100%"
+                  
                   title="Is Your Food Tasting Bland"
                   src="https://drive.google.com/file/d/126ne2PoL_tZxu9QO5--mOJVDT6cnWUSV/preview" allow="fullscreen"
                 />
                 <h2>Is Your Food Tasting Bland? </h2>
                 <br />
                 <iframe
-                  width="100%"
+                  
                   title="Saute"
                   src="https://drive.google.com/file/d/1vrk6GrW7_LbdnDICL2ujKAHdB9WCsqcF/preview" allow="fullscreen"
                 />
@@ -133,14 +132,14 @@ export default class Feast extends Component {
               </div>
               <div className="inst-vids">
                 <iframe
-                  width="100%"
+                  
                   title="Are you eating enough?"
                   src="https://drive.google.com/file/d/1h5a7YejBxSKFHHep-LF6-sz71hu7QYHU/preview" allow="fullscreen"
                 />
                 <h2>Are you Eating Enough?</h2>
                 <br />
                 <iframe
-                  width="100%"
+                  
                   title="Fajita Soup"
                   src="https://drive.google.com/file/d/1JJh2rQtDMfbDQtbjsJko1Rxp3DXJS-E8/preview" allow="fullscreen"
                 />
@@ -148,14 +147,14 @@ export default class Feast extends Component {
               </div>
               <div className="inst-vids">
                 <iframe
-                  width="100%"
+                  
                   title="What about the weekend"
                   src="https://drive.google.com/file/d/1h2cnhuX7tpmxeTbaus0oMTICNtG-uBxR/preview" allow="fullscreen"
                 />
                 <h2>What about the Weekend? </h2>
                 <br />
                 <iframe
-                  width="100%"
+                  
                   title="Nice Cream"
                   src="https://drive.google.com/file/d/14z2G5JRI3Ytp8O4FDYJH-ai08ZFubbAh/preview" allow="fullscreen"
                 />
@@ -167,14 +166,14 @@ export default class Feast extends Component {
                 <h2>Week 3</h2>
                 <br />
                 <iframe
-                  width="100%"
+                  
                   title="Smoothie Anyone?"
                   src="https://drive.google.com/file/d/1UVM2sxKTAn8LkMpbEMnVLKgEI4_whN1D/preview" allow="fullscreen"
                 />
                 <h2>Smoothie Anyone?</h2>
                 <br />
                 <iframe
-                  width="100%"
+                  
                   title="The Smoothie"
                   src="https://drive.google.com/file/d/1wwWYNQoRvh6LTyI989-liikFxyzj03Be/preview" allow="fullscreen"
                 />
@@ -182,14 +181,14 @@ export default class Feast extends Component {
               </div>
               <div className="inst-vids">
                 <iframe
-                  width="100%"
+                  
                   title="What is your reason why"
                   src="https://drive.google.com/file/d/1d4TnfxXThcuXLP3WxEKRRkStHQmWpIdG/preview" allow="fullscreen"
                 />
                 <h2>What is Your Reason WHY? </h2>
                 <br />
                 <iframe
-                  width="100%"
+                  
                   title="Power Bowls"
                   src="https://drive.google.com/file/d/1UF_wvAnQCXdzMDilktlN8ukXaBVWiZ7Z/preview" allow="fullscreen"
                 />
@@ -197,28 +196,28 @@ export default class Feast extends Component {
               </div>
               <div className="inst-vids">
                 <iframe
-                  width="100%"
+                  
                   title="Your Genes"
                   src="https://drive.google.com/file/d/1_my4q1a3W7KYFBoMv7rvAjO_G8GtJLIT/preview" allow="fullscreen"
                 />
                 <h2>How Do Your Genes Define You?</h2>
                 <br />
                 <iframe
-                  width="100%"
+                  
                   title="Creamy Vegie Soup"
                   src="https://drive.google.com/file/d/1DVUybESNVxYJ4E47ksnb0gQTZxyoaJri/preview" allow="fullscreen"/>
                 <h2>Cream Vegie Soup</h2>
               </div>
               <div className="inst-vids">
                 <iframe
-                  width="100%"
+                  
                   title="Vitamin B12"
                   src="https://drive.google.com/file/d/1WI707aGRvEWEmDsErpBFVE6HXVYdcCxv/preview" allow="fullscreen"
                 />
                 <h2>Vitamin B12</h2>
                 <br />
                 <iframe
-                  width="100%"
+                  
                   title="Fries"
                   src="https://drive.google.com/file/d/1eEZiP0MoOORuzNgYUs3MdlQvCMfLV3N4/preview" allow="fullscreen"
                 />
@@ -230,14 +229,14 @@ export default class Feast extends Component {
                 <h2>Week 4</h2>
                 <br />
                 <iframe
-                  width="100%"
+                  
                   title="Why Movement Matters"
                   src="https://drive.google.com/file/d/1YflG7LdhCzDoViTA1tTa2kCsai-CWCwL/preview" allow="fullscreen"
                 />
                 <h2>Why Movement Matters!</h2>
                 <br />
                 <iframe
-                  width="100%"
+                  
                   title="Smoke Tofu Wraps"
                   src="https://drive.google.com/file/d/1biH4TAiRrfX9e4qrIqt-tPi4o2yZVv9f/preview" allow="fullscreen"
                 />
@@ -245,28 +244,28 @@ export default class Feast extends Component {
               </div>
               <div className="inst-vids">
                 <iframe
-                  width="100%"
+                  
                   title="Something New"
                   src="https://drive.google.com/file/d/1eBsZBpvvElKJ8wDAXb7cn5AKY66DHyHk/preview" allow="fullscreen"
                 />
                 <h2>Explore Something New: Tofu</h2>
                 <br />
                 <iframe
-                  width="100%"
+                  
                   title="Fried Rice"
                   src="https://drive.google.com/file/d/13K5HxriXPRksfivhFU0cH2KAXORd9q5I/preview" allow="fullscreen"/>
                 <h2>Fried Rice</h2>
               </div>
               <div className="inst-vids">
                 <iframe
-                  width="100%"
+                  
                   title="Life-long Protection"
                   src="https://drive.google.com/file/d/1vkIkie0YoVob8PN3DK43twoc8BF6CupL/preview" allow="fullscreen"
                 />
                 <h2>Life-long Protection</h2>
                 <br />
                 <iframe
-                  width="100%"
+                  
                   title="Stir Fry"
                   src="https://drive.google.com/file/d/1ywY1JQuf6MaJVhp-SfOE9GI8xZh7oLFu/preview" allow="fullscreen"
                 />
@@ -274,13 +273,13 @@ export default class Feast extends Component {
               </div>
               <div className="inst-vids">
                 <iframe
-                  width="100%"
+                  
                   title="You did It!"
                   src="https://drive.google.com/file/d/1iTuRebt_j5A07OrdPHOnh7Su7-2zdn9K/preview" allow="fullscreen"
                 />
                 <h2>You Did It!</h2>
                 <iframe
-                  width="100%"
+                  
                   title="Brownie Batter Hummus"
                   src="https://drive.google.com/file/d/1DsmyA04BZKPcms3xDSdTgvTeeTL7kCWY/preview" allow="fullscreen"
                 />
