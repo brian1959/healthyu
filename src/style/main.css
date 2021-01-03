@@ -263,8 +263,8 @@ a:active {
 .companywrapper {
   display: flex;
   flex-direction: column;
-  align-content: center;
-  align-items: center;
+  justify-content: space-around;
+  align-items: left;
 }
 
 .dropdown {
@@ -276,7 +276,7 @@ a:active {
   background-color: #fff;
   color: #0a48d8;
   overflow: hidden;
-  transition: all 0.3s ease-out;
+  transition-timing-function: all 1s ease;
 }
 
 .dropDownNoShow {
@@ -284,7 +284,7 @@ a:active {
 }
 
 .dropDownShow {
-  min-height: 300px;
+  min-height: 250px;
 }
 
 .feast-text{
@@ -393,14 +393,14 @@ a:active {
   margin-top: 7px;
   height: 45px;
   cursor: pointer;
-  transition: all 0.3s ease-out;
+  transition: all 0.5s ease-out;
 }
 .menu-btn .btn-line {
   width: 45px;
   height: 2.5px;
   margin: 0 0 3px 0;
   background: #fff;
-  transition: all 0.3s ease-out;
+  transition: all 0.5s ease-out;
 }
 .menu-btn.close {
   transform: rotate(180deg);
@@ -507,7 +507,7 @@ nav {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  font-weight: 300;
+  font-weight: 500;
   color: #0a48d8;
   justify-content: flex-start;
   align-items: flex-start;
@@ -676,15 +676,6 @@ nav {
     font-weight: 700;
   }
 
-  .companywrapper {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: flex-start;
-    height: 80px;
-    margin-top:20px;
-  }
-
   .c-company{
     width: 120px;
     height:30px;
@@ -726,10 +717,7 @@ nav {
   } 
 
   .dropdown {
-    position: fixed;
-    width: 100%;
-    top: 75px;
-    left: 0;
+    top: 100px;
   }
 
   .dropDownShow {
@@ -935,6 +923,18 @@ nav {
     font-weight: bold;
   }
 
+  .recipe-vids {
+    margin:5px 10px 25px 10px;
+  }
+
+  .recipe-vids-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 10px 15px 10px 15px;
+  }
+
   .recipes-wrapper{
     font-size: large;
     Margin:5px 30px 5px 30px;
@@ -950,15 +950,27 @@ nav {
     margin: 10px 10%;
   }
 
-  .weekwrapper {
+  .week-wrapper {
     align-items: center;
     font-size: 1em;
   }
 
+  .week-wrapper h1{
+    font-style: italic;
+    font-size: 22px;
+  }
 }
 
-@media (min-width: 400px) {
+@media (min-width: 539px) {
 
+  .login-box{
+    top: 10px;
+    right: 50px;
+  }
+
+  .login-btn{
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1028,24 +1040,21 @@ nav {
     height: 100%;
   }
   
-  .companywrapper{
-    width:100%;
-    margin-top: 0;
-  }
   .dropdown {
-    position: fixed;
-    width: 100%;
-    top: 100px;
-    left: 0;
-  }
-  .dropDownShow {
-    min-height: 350px;
-    z-index: 4;
+    top: 150px;
   }
 
-.free-body{
-  margin-top: 80px;
-}
+
+  .free-body{
+    margin-top: 80px;
+  }
+
+  .inst-vids-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   .landing-hero {
     width: 98%;
     background-image: none;
@@ -1123,10 +1132,7 @@ nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    font-weight: 300;
-    color: #0a48d8;
     justify-content: space-around;
-    align-items: flex-start;
   }
 
   .navbar-header-links {
@@ -1151,6 +1157,13 @@ nav {
     margin: 0 10px;
   }
 
+  .nibble-wrapper {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    margin: 20px 30px;
+  }
   .prep-box {
     width: 40%;
   }
@@ -1163,10 +1176,25 @@ nav {
     align-items: flex-start;
   }
 
+  .recipe-vids-wrapper {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    margin: 10px 15px 10px 15px;
+  }
+
   .snk-vids {
     margin-bottom: 40px;
   }
 
+  .week-wrapper{
+    margin: 20px;
+  }
+
+  .week-wrapper h1{
+    font-size: 24px;
+  }
 }
 
 @media (min-width: 950px) {
@@ -1215,7 +1243,11 @@ nav {
   }
 
   .c-tag {
-    width: 350px;
+    width: 550px;
+  }
+
+  .companywrapper {
+
   }
 
   .digdeeper-text {
@@ -1232,10 +1264,18 @@ nav {
   .digdeeper-wrapper {
     text-align: center;
   }
+
+    .dropdown {
+    top: 180px;
+  }
+
+  .free-body{
+    margin-top:120px;
+  }
  
   .inst-vids {
     font-size: large;
-    width: 80%;
+    width: 100%;
     margin-bottom: 50px;
     text-align: center;
   }
@@ -1254,21 +1294,17 @@ nav {
     align-items: flex-start;
   }
 
-  .inst-vids-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-
-    margin: 10px 15px 10px 15px;
-  }
-
   .landing-hero {
     width: 98%;
     background-image: none;
-    margin: 80px 1% 20px 1%;
+    margin: 120px 1% 20px 1%;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .login-btn{
+    font-size: 22px;
   }
 
   .meal-text {
@@ -1279,7 +1315,7 @@ nav {
 
   .meal-title-wrapper {
     width: 100%;
-    margin: 20px 150px 40px 0;
+    margin: 120px 150px 40px 0;
     text-align: center;
   }
 
@@ -1292,7 +1328,6 @@ nav {
     margin-top: 17px;
     height: 45px;
     cursor: pointer;
-    transition: all 0.3s ease-out;
   }
 
   .menu-btn .btn-line {
@@ -1300,7 +1335,6 @@ nav {
     height: 4.5px;
     margin: 0 0 3px 0;
     background: #fff;
-    transition: all 0.3s ease-out;
   }
 
   .menu-btn.close {
@@ -1323,6 +1357,10 @@ nav {
     font-size: 24px;
     margin-left: 15px;
     margin-top: 15px;
+  }
+
+  .navbar{
+    height: 180px;
   }
 
   .nibble-main {
@@ -1369,6 +1407,14 @@ nav {
     font-weight: 300;
   }
 
+  .recipe-vids {
+    margin:5px 10px 25px 10px;
+  }
+
+  .week-wrapper{
+    margin: 5px 40px 25px 40px;
+  }
+
 }
 
 @media (min-width: 1200px) {
@@ -1404,8 +1450,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    justify-items: flex-start;
-    width: 31%;
+    justify-items: center;
     margin: 0 1%;
     text-align: center;
   }
@@ -1467,22 +1512,24 @@ nav {
   }
 
   .c-company {
-    width: 70%;
+    width: 50%;
+    height: 120%;
   }
 
   .c-logo {
     width: 200px;
     height: 200px;
-    margin: 0 0 40px 5px;
+    margin: 20px 0 20px 0;
   }
 
   .c-tag {
-    width: 700px;
+    width: 70%;
+    height:100%;
   }
 
   .company-container {
-    margin-top: 20px;
-    margin-left: 3%;
+    margin-top: 0;
+    margin-left: 1%;
     height: 100%;
     width: 80%;
     display: flex;
@@ -1490,12 +1537,6 @@ nav {
     align-content: space-between;
   }
 
-  .companywrapper {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-  }
   
   .cst {
     margin-left: 5px;
@@ -1519,32 +1560,14 @@ nav {
   }
 
   .dropdown {
-    position: fixed;
-    width: 100%;
-    top: 165px;
-    left: 0;
-  }
-  .dropDownShow {
-    min-height: 400px;
-    z-index: 4;
+    top: 230px;
   }
 
   .header-spacer {
     height: 200px;
   }
-  
-  .inst-vids-container {
-    margin: 10px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
-  }
 
   .inst-vids-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-around;
     margin: 10px 15px 10px 40px;
   }
@@ -1561,8 +1584,6 @@ nav {
   .landing-herovid {
     margin-top: 10px;
     margin-bottom: 20px;
-    width:500px;
-    height: 300px;
   }
   
   .login-box{
@@ -1631,14 +1652,12 @@ nav {
     margin-top: 7px;
     height: 45px;
     cursor: pointer;
-    transition: all 0.3s ease-out;
   }
   .menu-btn .btn-line {
     width: 30px;
     height: 3.5px;
     margin: 0 0 3px 0;
     background: #fff;
-    transition: all 0.3s ease-out;
   }
   .menu-btn.close {
     transform: rotate(180deg);
@@ -1721,16 +1740,10 @@ nav {
     font-size: 18px;
   }
   .navbar-column-link-wrapper {
-    width: 70%;
-    margin: 20px 15%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-weight: 300;
-    color: #0a48d8;
-    justify-content: flex-start;
-    align-items: flex-start;
+    margin: 20px 5%;
+    justify-content: space-around;
   }
+  
   .navbar-column-link-box {
     width: 250px;
     margin: 10px 5px 20px 0;
@@ -1830,8 +1843,6 @@ nav {
   }
 
   .week-wrapper {
-    align-content: center;
-    text-align: center;
     font-size: 1.5em;
     font-weight: bold;
   }
