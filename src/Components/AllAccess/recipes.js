@@ -17,9 +17,9 @@ export default class Recipes extends Component {
             <strong>Video Recipes</strong>
           </div>
           <div className="inst-vids-container">
-            <div className="inst-vids-wrapper">
-              <div className="week-wrapper">
-                <div className="inst-vids">
+            <div className="recipe-vids-wrapper">
+             
+                <div className="recipe-vids">
                   <iframe
                     title="oats"
                    
@@ -27,7 +27,7 @@ export default class Recipes extends Component {
                   />
                   <h2>Oats</h2>
                 </div>
-                <div className="inst-vids">
+                <div className="recipe-vids">
                   <iframe
                     title="Beans"
                    
@@ -36,7 +36,7 @@ export default class Recipes extends Component {
 
                   <h2>Beans, quinoa, cillantro dressing</h2>
                 </div>
-                <div className="inst-vids">
+                <div className="recipe-vids">
                   <iframe
                    
                     title="Minestrone"
@@ -44,9 +44,9 @@ export default class Recipes extends Component {
                   />
                   <h2>Minestrone/Cashew Parm</h2>
                 </div>
-              </div>
-              <div className="week-wrapper">
-                <div className="inst-vids">
+             
+              
+                <div className="recipe-vids">
                   <iframe
                     
                     title="Pancakes"
@@ -54,7 +54,7 @@ export default class Recipes extends Component {
                   />
                   <h2>Pancakes/Berry Sauce</h2>
                 </div>
-                <div className="inst-vids">
+                <div className="recipe-vids">
                   <iframe
                     
                     title="Saute"
@@ -62,7 +62,7 @@ export default class Recipes extends Component {
                   />
                   <h2>Water Saute and Wraps</h2>
                 </div>
-                <div className="inst-vids">
+                <div className="recipe-vids">
                   <iframe
                    
                     title="Fajita Soup"
@@ -70,7 +70,7 @@ export default class Recipes extends Component {
                   />
                   <h2>Fajita Soup</h2>
                 </div>
-                <div className="inst-vids">
+                <div className="recipe-vids">
                   <iframe
                     
                     title="Nice Cream"
@@ -78,9 +78,8 @@ export default class Recipes extends Component {
                   />
                   <h2>Nice Cream</h2>
                 </div>
-              </div>
-              <div className="week-wrapper">
-                <div className="inst-vids">
+             
+                <div className="recipe-vids">
                   <iframe
                    
                     title="The Smoothie"
@@ -88,7 +87,7 @@ export default class Recipes extends Component {
                   />
                   <h2>The Smoothie</h2>
                 </div>
-                <div className="inst-vids">
+                <div className="recipe-vids">
                   <iframe
                     
                     title="Power Bowls"
@@ -96,7 +95,7 @@ export default class Recipes extends Component {
                   />
                   <h2>Power Bowls</h2>
                 </div>
-                <div className="inst-vids">
+                <div className="recipe-vids">
                   <iframe
                    
                     title="Creamy Vegie Soup"
@@ -104,7 +103,7 @@ export default class Recipes extends Component {
                   />
                   <h2>Creamy Vegie Soup</h2>
                 </div>
-                <div className="inst-vids">
+                <div className="recipe-vids">
                   <iframe
                     
                     title="Fries"
@@ -112,9 +111,8 @@ export default class Recipes extends Component {
                   />
                   <h2>Fries</h2>
                 </div>
-              </div>
-              <div className="week-wrapper">
-                <div className="inst-vids">
+             
+                <div className="recipe-vids">
                   <iframe
                    
                     title="Smoke Tofuy Wrap"
@@ -122,7 +120,7 @@ export default class Recipes extends Component {
                   />
                   <h2>Smoked Tofu Wraps</h2>
                 </div>
-                <div className="inst-vids">
+                <div className="recipe-vids">
                   <iframe
                    
                     title="Fried Rice"
@@ -130,7 +128,7 @@ export default class Recipes extends Component {
                   />
                   <h2>Fried Rice</h2>
                 </div>
-                <div className="inst-vids">
+                <div className="recipe-vids">
                   <iframe
                    
                     title="Stir Fry"
@@ -138,12 +136,12 @@ export default class Recipes extends Component {
                   />
                   <h2>Stir Fry</h2>
                 </div>
-                <div className="inst-vids">
+                <div className="recipe-vids">
                   <iframe   title="Brownie Batter Hummus" src="https://drive.google.com/file/d/1DsmyA04BZKPcms3xDSdTgvTeeTL7kCWY/preview" allow="fullscreen"/>
                     <h2>Brownie Batter Hummus</h2>
                   
                 </div>
-              </div>
+              
             </div>
           </div>
           <div className="recipes-wrapper">

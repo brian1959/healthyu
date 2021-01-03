@@ -81,38 +81,6 @@ class Navbar extends Component {
           <div className="navbar-column-link-wrapper">
             <div className="navbar-column-link-box">
               <div className="navbar-column-title">Programs & Services</div>
-              <Link to="/nibble">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  Nibbles
-                </div>
-              </Link>
-              <Link to="/snack">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  Snacks
-                </div>
-              </Link>
-              <Link to="/dine">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  Dine
-                </div>
-              </Link>
-              <Link to="/feast">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  Feast
-                </div>
-              </Link>
               <Link to="/pickyeaters">
                 <div
                   className="navbar-column-link"
@@ -156,7 +124,6 @@ class Navbar extends Component {
                   className="navbar-column-link"
                   onClick={() => this.showMenu()}
                 >
-                  {" "}
                   Free Resources
                 </div>
               </Link>
@@ -174,99 +141,8 @@ class Navbar extends Component {
                 </div>
               </Link>
             </div>
-            <div className="navbar-column-link-box">
-              <div className="navbar-column-title">All Access</div>
-              <Link to="/autoimmune">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-            
-                  Autoimmune
-                </div>
-              </Link>
-              <Link to="/environment">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  {" "}
-                  Environment
-                </div>
-              </Link>
-              <Link to="/foodfocus">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  {" "}
-                  Food Focus
-                </div>
-              </Link>
-              <Link to="/foryourfamily">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  {" "}
-                  For Your Family
-                </div>
-              </Link>
-              <Link to="/level50">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  {" "}
-                  Level 50+
-                </div>
-              </Link>
-              <Link to="/men">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  {" "}
-                  Men
-                </div>
-              </Link>
-              <Link to="/pregnancy">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  {" "}
-                  Pregnancy
-                </div>
-              </Link>
-              <Link to="/recipes">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  {" "}
-                  Recipes
-                </div>
-              </Link>
-              <Link to="/vegan">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  {" "}
-                  The Lonely Vegan
-                </div>
-              </Link>
-              <Link to="/women">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  {" "}
-                  Women
-                </div>
-              </Link>
-            </div>
+           
+             
           </div>
         </div>
       </div>
