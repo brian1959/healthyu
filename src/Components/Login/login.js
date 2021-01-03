@@ -9,11 +9,9 @@ export default class Login extends Component {
 
 	render() {
 		return (
-			<div className="login-btn">
-				<button className="login" onClick={this.login}>
+			<div className="login-btn" onClick={this.login}>
 					Login
-				</button>
-			</div>
+							</div>
 		);
 	}
 }

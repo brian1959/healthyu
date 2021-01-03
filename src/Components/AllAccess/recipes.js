@@ -22,8 +22,7 @@ export default class Recipes extends Component {
                 <div className="inst-vids">
                   <iframe
                     title="oats"
-                    width="100%"
-                    height="100%"
+                   
                     src="https://drive.google.com/file/d/1sHVNGP0LCpoX8PuVqN2mL3l1LM7HyddR/preview" allow="fullscreen"
                   />
                   <h2>Oats</h2>
@@ -31,7 +30,7 @@ export default class Recipes extends Component {
                 <div className="inst-vids">
                   <iframe
                     title="Beans"
-                    width="100%"
+                   
                     src="https://drive.google.com/file/d/1-STConyxUyumAhb0N9BoUtiLbITZhfLh/preview"
                   />
 
@@ -39,7 +38,7 @@ export default class Recipes extends Component {
                 </div>
                 <div className="inst-vids">
                   <iframe
-                    width="100%"
+                   
                     title="Minestrone"
                     src="https://drive.google.com/file/d/1l4WZl2TS9JVUnUxFhTnqAjNnzruKadgZ/preview" allow="fullscreen"
                   />
@@ -49,7 +48,7 @@ export default class Recipes extends Component {
               <div className="week-wrapper">
                 <div className="inst-vids">
                   <iframe
-                    width="100%"
+                    
                     title="Pancakes"
                     src="https://drive.google.com/file/d/16TqDmhg95G578uLXTWHXRp49pzQ5KjhC/preview" allow="fullscreen"
                   />
@@ -57,7 +56,7 @@ export default class Recipes extends Component {
                 </div>
                 <div className="inst-vids">
                   <iframe
-                    width="100%"
+                    
                     title="Saute"
                     src="https://drive.google.com/file/d/1vrk6GrW7_LbdnDICL2ujKAHdB9WCsqcF/preview" allow="fullscreen"
                   />
@@ -65,7 +64,7 @@ export default class Recipes extends Component {
                 </div>
                 <div className="inst-vids">
                   <iframe
-                    width="100%"
+                   
                     title="Fajita Soup"
                     src="https://drive.google.com/file/d/1JJh2rQtDMfbDQtbjsJko1Rxp3DXJS-E8/preview" allow="fullscreen"
                   />
@@ -73,7 +72,7 @@ export default class Recipes extends Component {
                 </div>
                 <div className="inst-vids">
                   <iframe
-                    width="100%"
+                    
                     title="Nice Cream"
                     src="https://drive.google.com/file/d/14z2G5JRI3Ytp8O4FDYJH-ai08ZFubbAh/preview" allow="fullscreen"
                   />
@@ -83,7 +82,7 @@ export default class Recipes extends Component {
               <div className="week-wrapper">
                 <div className="inst-vids">
                   <iframe
-                    width="100%"
+                   
                     title="The Smoothie"
                     src="https://drive.google.com/file/d/1wwWYNQoRvh6LTyI989-liikFxyzj03Be/preview" allow="fullscreen"
                   />
@@ -91,7 +90,7 @@ export default class Recipes extends Component {
                 </div>
                 <div className="inst-vids">
                   <iframe
-                    width="100%"
+                    
                     title="Power Bowls"
                     src="https://drive.google.com/file/d/1UF_wvAnQCXdzMDilktlN8ukXaBVWiZ7Z/preview" allow="fullscreen"
                   />
@@ -99,7 +98,7 @@ export default class Recipes extends Component {
                 </div>
                 <div className="inst-vids">
                   <iframe
-                    width="100%"
+                   
                     title="Creamy Vegie Soup"
                     src="https://drive.google.com/file/d/1DVUybESNVxYJ4E47ksnb0gQTZxyoaJri/preview" allow="fullscreen"
                   />
@@ -107,7 +106,7 @@ export default class Recipes extends Component {
                 </div>
                 <div className="inst-vids">
                   <iframe
-                    width="100%"
+                    
                     title="Fries"
                     src="https://drive.google.com/file/d/1eEZiP0MoOORuzNgYUs3MdlQvCMfLV3N4/preview" allow="fullscreen"
                   />
@@ -117,7 +116,7 @@ export default class Recipes extends Component {
               <div className="week-wrapper">
                 <div className="inst-vids">
                   <iframe
-                    width="100%"
+                   
                     title="Smoke Tofuy Wrap"
                     src="https://drive.google.com/file/d/1biH4TAiRrfX9e4qrIqt-tPi4o2yZVv9f/preview" allow="fullscreen"
                   />
@@ -125,7 +124,7 @@ export default class Recipes extends Component {
                 </div>
                 <div className="inst-vids">
                   <iframe
-                    width="100%"
+                   
                     title="Fried Rice"
                     src="https://drive.google.com/file/d/13K5HxriXPRksfivhFU0cH2KAXORd9q5I/preview" allow="fullscreen"
                   />
@@ -133,14 +132,14 @@ export default class Recipes extends Component {
                 </div>
                 <div className="inst-vids">
                   <iframe
-                    width="100%"
+                   
                     title="Stir Fry"
                     src="https://drive.google.com/file/d/1ywY1JQuf6MaJVhp-SfOE9GI8xZh7oLFu/preview" allow="fullscreen"
                   />
                   <h2>Stir Fry</h2>
                 </div>
                 <div className="inst-vids">
-                  <iframe width="100%" title="Brownie Batter Hummus" src="https://drive.google.com/file/d/1DsmyA04BZKPcms3xDSdTgvTeeTL7kCWY/preview" allow="fullscreen"/>
+                  <iframe   title="Brownie Batter Hummus" src="https://drive.google.com/file/d/1DsmyA04BZKPcms3xDSdTgvTeeTL7kCWY/preview" allow="fullscreen"/>
                     <h2>Brownie Batter Hummus</h2>
                   
                 </div>
@@ -252,7 +251,7 @@ export default class Recipes extends Component {
             </div>
             <br />
             <div className="recipe-body">
-              <div className="recipe-title">THE daily smoothie</div>
+              <div className="recipe-title">The Daily Smoothie</div>
               <br />
               This smoothie has over 500 calories and delivers 75% of
               nutritional needs. I divide it 6 ways with my family to give us a

@@ -17,7 +17,7 @@ export default class Environment extends Component {
           <div className="inst-vids-container">
             <div className="inst-vids-wrapper">
               <div className="snk-vids">
-                <iframe height="100%" 
+                <iframe  
                 title="Environment"
                   src="https://drive.google.com/file/d/1RSVm5VVFNAai4XTZQjwP8wWAZwAwAyJB/preview" allow="fullscreen" />
                 <h2>Make Health a Priority</h2>

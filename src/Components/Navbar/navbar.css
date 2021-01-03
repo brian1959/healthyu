@@ -15,44 +15,16 @@
     left: 0;
   }
   //Company Stuff
-  .company-container {
-    margin-top: 40px;
-    margin-left: 15%;
-    padding-left:10%;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: space-around;
-  }
-  
-  .c-logo {
-    width: 550px;
-    margin-left:25px;
-    margin-top:12px;
-  }
-  
-  .c-tag {
-    height: 70%;
-  }
+
+
   
   //Menu button
-  
-  .menu-box {
+  .login-box{
     position: absolute;
-    z-index: 3;
-    right: 15%;
-    top: 20px;
-    height: 60px;
-    width: 23%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    color: #fff;
-    font-weight: 300;
+    z-index: 4;
+    top: 30px;
+    right:5%; 
   }
-  
   .menu-header-date {
     height: 60px;
     font-size: 18px;
@@ -62,7 +34,7 @@
   
   .menu-items-holder {
     width: 5%;
-    height: 60px;
+    height: 40px;
     display: flex;
     flex-direction: row;
     cursor: pointer;

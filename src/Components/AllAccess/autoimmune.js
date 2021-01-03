@@ -6,7 +6,7 @@ export default class Autoimmune extends Component {
     return (
       <div className="nibble-main">
         <div className="meal-title-wrapper">
-          <img src="../../images/immune2.jpg" alt="Autoimmune" />
+          <img src="../../images/immune3.jpg" alt="Autoimmune" />
           <div className="meal-title">Autoimmune</div>
           <div className="meal-text">
             Learn about how what you eat affects autoimmune disorders and how
@@ -16,10 +16,11 @@ export default class Autoimmune extends Component {
           <div className="inst-vids-container">
             <div className="inst-vids-wrapper">
               <div className="snk-vids">
+               
                 <iframe
-                 height="100%" 
                 title="Autoimmune"
                   source src="https://drive.google.com/file/d/1m6NI7aR8lriUnLTQJEHIpIgKL2AkAMls/preview" allow="fullscreen"/>
+                            
                 <h2>Autoimmune Disorders</h2>
               </div>
             </div>

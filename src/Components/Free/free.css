@@ -53,9 +53,9 @@
     }
     
     .free-main{
-        font-size: 24px;
+        font-size:18px;
         font-weight: 400;
-        margin:40px 20px 15px 20px;
+        margin:20px 10px 15px 10px;
     }
     
     .free-group{
@@ -81,7 +81,7 @@
     }
     
     .free-text {
-        font-size: 22px;
+        font-size: 18px;
         font-weight: 400;
     }
     
@@ -93,15 +93,7 @@
     }
     .free-title {
         text-align: center;
-        font-size: 28px;
-    }
-
-}
-
-@media (min-width: 1200px){
-    .free-title {
-        font-size: 30px;
-        text-align: center;
+        font-size: 24px;
     }
 
 }
