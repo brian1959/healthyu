@@ -13,13 +13,14 @@ class Navbar extends Component {
 
     this.state = {
       menuShow: false,
+      memberShow:false
     };
   }
 
   componentDidMount(){
 
-    axios.get("/api/accessprivs").then(purchases => {
-      this.setState({ mypurchases: purchases.data});
+    axios.get("/api/member").then(purchases => {
+      this.setState({ mypurchases: purchases.data[0]});
     });
   }
 
@@ -140,6 +141,16 @@ class Navbar extends Component {
                   Home
                 </div>
               </Link>
+              {this.state.mypurchases ?
+              <Link to="/member">
+                <div
+                  className="navbar-column-link"
+                  onClick={() => this.showMenu()}
+                >
+              
+                  My Access
+                </div>
+              </Link>: "" }
             </div>
            
              

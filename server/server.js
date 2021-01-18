@@ -117,6 +117,8 @@ app.get("/api/user-data", envCheck, (req, res) => {
 app.get("/api/memberprivs", mc.getMemberPrivs);
 app.get("/api/member", gc.getMember);
 app.get("/api/accessprivs", mc.getAccessPrivs);
+app.get("/api/homemeals", mc.getHomeMealTypes);
+app.get("/api/pemeal", mc.getPickyeaterMealTypes);
 app.post("/api/orderheader", mc.addOrderHeader);
 app.post("/api/orderdetail", mc.addOrderDetail);
 

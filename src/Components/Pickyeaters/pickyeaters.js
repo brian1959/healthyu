@@ -1,7 +1,7 @@
 import React, { Component} from "react";
 import { Checkbox } from "semantic-ui-react";
 import PayPal from '../PayPal';
-
+import axios from "axios";
 export default class Pickyeaters extends Component {
   constructor(props) {
     super(props)
@@ -17,12 +17,20 @@ export default class Pickyeaters extends Component {
       checkoutTotal: 0,
       purDesc:"",
       checkout:false,
+      mypurItems:[],
+      purItems:[]
     };
   }
 
 
   componentDidMount() {
     document.title = "Picky Eaters";
+
+    
+    axios.get("/api/accessprivs").then(purchases => {
+      this.setState({ mypurItems: purchases.data });
+    });
+  
   }
 
 
@@ -87,7 +95,7 @@ export default class Pickyeaters extends Component {
   }
 
   render() {
-
+    console.log("Past Purchases",this.state.mypurItems)
     console.log("meal cost",this.state.mealAdjTotal)
     console.log("meal type",this.state.displayMealType)
     console.log("cost array",this.state.displayMealCost)
@@ -114,9 +122,9 @@ export default class Pickyeaters extends Component {
           <div className="aatopic">
             <div className="aatitle">Autoimmune - $5</div>
             <div className="aatext">
-              Learn about how what you eat affects autoimmune disorders and how
+              'Learn about how what you eat affects autoimmune disorders and how
               changing your eating habits can have a huge impact on how you
-              feel.
+              feel.'
             </div>
           </div>
         </div>
