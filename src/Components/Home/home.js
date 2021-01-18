@@ -1,7 +1,7 @@
 import React from "react";
 import MealType from './mealitem';
 import {mealtypeData} from './productdata';
-
+import axios from 'axios'
 
 function Home() {
        document.title = "Healthy U";
@@ -46,7 +46,7 @@ function Home() {
     mealtypeImage={mealtype.mtimage}
     mealtypeName ={mealtype.mtname}
     mealtypeBody={mealtype.mtbody}
-    mealtypeTcost={mealtype.cost}
+    mealtypeTcost={mealtype.mttxtcost}
     mealtypeCost={mealtype.mtcost}
     />
   ))}
