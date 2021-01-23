@@ -2,7 +2,6 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 
 import About from './Components/About/about';
-import Allaccess from './Components/AllAccess/allaccess'
 import Dine from './Components/Dine/dine';
 import Feast from './Components/Feast/feast';
 import Founder from './Components/About/aboutfounder';
@@ -32,7 +31,6 @@ export default (
   <Switch>
     <Route exact path="/" component={Home} />
     <Route path="/about" component={About}/>
-    <Route path="/allaccess" component={Allaccess}/>
     <Route path="/aboutourfounder" component={Founder}/> 
     <Route path="/dine" component={Dine} />
     <Route path="/feast" component={Feast} />
