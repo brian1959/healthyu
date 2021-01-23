@@ -47,22 +47,22 @@ module.exports = {
           errorMessage: "Failed to get privileges"
         });
       })
-  }
+  },
 
   getHomeMealTypes: (req, res) => {
     const db = req.app.get("db");
-    db.get_meal_types_home
+    db.get_meal_types_home()
       .then(meals => res.status(200).send(meals))
       .catch(err => {
         res.status(500).send({
           errorMessage: "Failed to get meal types"
         });
       })
-  }
+  },
   
   getPickyeaterMealTypes: (req, res) => {
     const db = req.app.get("db"); 
-    db.get_meal_types_all
+    db.get_meal_types_all()
       .then(meals => res.status(200).send(meals))
       .catch(err => {
         res.status(500).send({
