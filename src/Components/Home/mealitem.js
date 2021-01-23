@@ -59,7 +59,7 @@ return (
    
         checkout ? ( <PayPal desc={props.mealtypeName} amnt={props.mealtypeCost} items={[""]}/>
         ):(
-            <button onClick={()=> {setCheckOut(true)}}>Purchase</button>
+            <button onClick={()=> {setCheckOut(true)}}>Get started</button>
         )       )  ) }
     </div>
     </div>

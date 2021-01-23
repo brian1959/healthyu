@@ -1,1 +1,1 @@
-Select * from meal_details Where pickyeater = false Order by homepage, mtid
+Select * from meal_details Where pickyeater <> false Order by homepage, mtid

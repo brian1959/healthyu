@@ -1,14 +1,29 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import MealType from './mealitem';
-import {mealtypeData} from './productdata';
 import axios from 'axios'
 
-function Home() {
-       document.title = "Healthy U";
 
+function Home() {
+
+       document.title = "Healthy U";
+       const [mealtypedata, setMealtypedata] = useState([])
+   
+       useEffect(() => {
+       axios.get("/api/homemeals").then(response => {
+        setMealtypedata(response.data)
+      });
+    },[setMealtypedata, mealtypedata]);
+
+    const [logdin, setLogdin]= useState(false)
+    useEffect(() => {
+      axios.get("/api/member").then(response => {
+        setLogdin(response.data? true:false)
+      });
+    }, [setLogdin, logdin] );
+    console.log('logged In', logdin)
  
     return (
-
+    
       <div className="landing">
         <div className="landing-hero">
           <div className="landing-herovid">
@@ -40,7 +55,7 @@ function Home() {
         <section className="land-meal-type">
           <div className="prep-title">How hungry are you?</div>
           <div className="prep-boxes-container">
-  {mealtypeData.map(mealtype => (
+  {mealtypedata.map(mealtype => (
     <MealType
     key={mealtype.mtid}
     mealtypeImage={mealtype.mtimage}
