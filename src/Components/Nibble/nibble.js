@@ -6,7 +6,9 @@ export default class Nibble extends Component {
     return (
       <div className="nibble-main">
         <div className="meal-title-wrapper">
-          <img src="../../images/nibble.jpg" width="20%" alt="Nibble" />
+          <div className="meal-title-image">
+          <img src="../../images/nibble.jpg"  alt="Nibble" />
+          </div>
           <div className="meal-title">Nibble</div>
           <div className="meal-text">
             This brief series empowers parents to know which foods to focus on
@@ -20,7 +22,7 @@ export default class Nibble extends Component {
             <div className="nibble-wrapper">
               <div className="snk-vids">
                 <iframe
-                  width="80%"
+                  
                   title="Over-fed"
                   src="https://drive.google.com/file/d/1gOxkqlqcTfoZ7vWT9AMAej7pv1tbFX3E/preview" allow="fullscreen"
                 />
@@ -28,15 +30,14 @@ export default class Nibble extends Component {
               </div>
               <div className="snk-vids">
                 <iframe
-                  width="100%"
+                  
                   title="Is Organic Better?"
-                  src="https://drive.google.com/file/d/10_ZwQBY0Q64pLbvUOG78lYKnxzGdmlNS/preview" allow="fullscreen"
-                />
+                  src="https://drive.google.com/file/d/10_ZwQBY0Q64pLbvUOG78lYKnxzGdmlNS/preview" allow="fullscreen"/>
                 <h2>Is Organic Better?</h2>
               </div>
               <div className="snk-vids">
                 <iframe
-                  width="100%"
+                  
                   title="Small Changes"
                   src="https://drive.google.com/file/d/1Xj48_cj-BFbOSGMlqzxt4YSmR5cX3X4Y/preview" allow="fullscreen"
                 />
@@ -44,7 +45,7 @@ export default class Nibble extends Component {
               </div>
               <div className="snk-vids">
                 <iframe
-                  width="100%"
+                  
                   title="Fiber in Every Bite"
                   src="https://drive.google.com/file/d/1D6Qh1JDnEf2wc9qOSBLajxyr2JgAEOSu/preview" allow="fullscreen"
                 />

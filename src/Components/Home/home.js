@@ -1,25 +1,36 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import MealType from './mealitem';
-import {mealtypeData} from './productdata';
-import Login from "../Login/login";
+import axios from 'axios'
+
 
 function Home() {
-       document.title = "Healthy U";
 
+       document.title = "Healthy U";
+       const [mealtypedata, setMealtypedata] = useState([])
+       const [logdin, setLogdin]= useState(false)
+
+       const getHomeMeals=() =>{ axios.get("/api/homemeals").then(response => {setMealtypedata(response.data) });
+      };
+
+        const getLoginData = () => {axios.get("/api/member").then(response => {setLogdin(response.data? true:false) });
+};
+   
+       useEffect(() => {
+         getHomeMeals()
+         getLoginData()
+         console.log("login State", logdin)
+        }, [logdin]);
+  
  
     return (
-
       <div className="landing">
-
         <div className="landing-hero">
           <div className="landing-herovid">
           <iframe
-                 height="100%"
-                 width="100%"
                   title="Welcome"
                    src="https://drive.google.com/file/d/1Agkpz2NNJrhbT6ULsSJRxh1ioSS7ZokT/preview?start=1" allow="fullscreen" />
           </div>
-          <a href="https://nutritionstudies.org/courses/plant-based-nutrition/" title="Plant-based Nutrition Certificate Badge"><img src="https://nutritionstudies.org/images/graduate-badge.png" width="250" alt="Grad Badge"/></a>
+          <a href="https://nutritionstudies.org/courses/plant-based-nutrition/" title="Plant-based Nutrition Certificate Badge"><img src="https://nutritionstudies.org/images/graduate-badge.png" width="150" alt="Grad Badge"/></a>
           <div className="overlay-promo">Eat your way to a better life</div>
           <div className="overlay-promo-text">
             Welcome to the HealthyU2 website! This site was created to help you
@@ -38,18 +49,20 @@ function Home() {
             and those over 50. I’m so happy you stopped by! I'm thrilled to help
             you discover life-changing information in small bites!
           </div>
-          <Login/>
+        
         </div>
         <section className="land-meal-type">
           <div className="prep-title">How hungry are you?</div>
           <div className="prep-boxes-container">
-  {mealtypeData.map(mealtype => (
+  {mealtypedata.map(mealtype => (
     <MealType
     key={mealtype.mtid}
     mealtypeImage={mealtype.mtimage}
     mealtypeName ={mealtype.mtname}
     mealtypeBody={mealtype.mtbody}
+    mealtypeTcost={mealtype.mttxtcost}
     mealtypeCost={mealtype.mtcost}
+    loggedIn={logdin}
     />
   ))}
                 </div>

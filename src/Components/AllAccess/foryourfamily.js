@@ -14,7 +14,7 @@ export default class Foryourfamily extends Component {
           <div className="inst-vids-container">
             <div className="inst-vids-wrapper">
               <div className="snk-vids">
-                <iframe height="100%" 
+                <iframe  
                 title="For Your Family"
 src="https://drive.google.com/file/d/1vucBXRHYpd0H1fvqYsfLSUPBND8kZi_P/preview" allow="fullscreen" />
                 <h2>Circadian Rhythms</h2>

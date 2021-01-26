@@ -6,7 +6,9 @@ export default class Dine extends Component {
     return (
       <div className="nibble-main">
         <div className="meal-title-wrapper">
-          <img src="../../images/dine.jpg" width="30%" alt="Dine" />
+          <div className="meal-title-image">
+          <img src="../../images/dine1.jpg"  alt="Dine" />
+          </div>
           <div className="meal-title">Dine</div>
           <div className="meal-text">
             The dine series is designed to give you more in-depth information
@@ -27,7 +29,6 @@ export default class Dine extends Component {
             <div className="nibble-wrapper">
               <div className="snk-vids">
                 <iframe
-                  width="100%"
                   title="Calorie Density"
                   src="https://drive.google.com/file/d/1olvvlg5j3KxsayVv2SZO4DXFvhQ7uw_8/preview" allow="fullscreen"
                 />
@@ -35,7 +36,6 @@ export default class Dine extends Component {
               </div>
               <div className="snk-vids">
                 <iframe
-                  width="100%"
                   title="Food Synergy"
                   src="https://drive.google.com/file/d/1KfsFvnytUnaBGbnk9NdLiwwZhSRR2fS6/preview" allow="fullscreen"
                 />
@@ -43,7 +43,6 @@ export default class Dine extends Component {
               </div>
               <div className="snk-vids">
                 <iframe
-                  width="100%"
                   title="Lobbying"
                   src="https://drive.google.com/file/d/1UvJ-5z1fIPUbhMnj_I1_1seClLRHydWA/preview" allow="fullscreen"
                 />
@@ -51,7 +50,6 @@ export default class Dine extends Component {
               </div>
               <div className="snk-vids">
                 <iframe
-                  width="100%"
                   title="Your Health"
                   src="https://drive.google.com/file/d/1AgpiIHIRPnsbWJ_Chg8ZGUS4Ugc9pgUY/preview" allow="fullscreen"
                 />
@@ -59,7 +57,6 @@ export default class Dine extends Component {
               </div>
               <div className="snk-vids">
                 <iframe
-                  width="50%"
                   title="Med Benefits"
                   src="https://drive.google.com/file/d/1FY9Zgf5TJ8fdjBrehqVvoowpSpMEadwu/preview" allow="fullscreen"
                 />
@@ -67,7 +64,6 @@ export default class Dine extends Component {
               </div>
               <div className="snk-vids">
                 <iframe
-                  width="100%"
                   title="Calories In Calories Out"
                   src="https://drive.google.com/file/d/1Dkiyj4eJQkn7n-Hr3HPLlXDx0-Fh_-s4/preview" allow="fullscreen"
                 />
@@ -75,7 +71,6 @@ export default class Dine extends Component {
               </div>
               <div className="snk-vids">
                 <iframe
-                  width="100%"
                   title="Protein, Eggs, and Cheese"
                   src="https://drive.google.com/file/d/1RO1SpcEMUiM2j7c_VVP0QW8kVrjMdQkX/preview" allow="fullscreen"
                 />
@@ -83,7 +78,6 @@ export default class Dine extends Component {
               </div>
               <div className="snk-vids">
                 <iframe
-                  width="100%"
                   title="Artifical Sweetners"
                   src="https://drive.google.com/file/d/1W4xQG4PJkLxxzshD2k7uDS8XPN1cwHzY/preview" allow="fullscreen"
                 />

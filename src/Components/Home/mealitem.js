@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from "react";
 import PayPal from '../PayPal';
-
+import Login from '../Login/login'
 export default function MealType(props) {
 
 const ref = useRef();
@@ -40,6 +40,7 @@ function useOnClickOutside(ref, handler) {
   }
 
 return (
+  
     <div className="prep-box">
  <img className="prep-images"
         src={props.mealtypeImage}
@@ -50,16 +51,16 @@ return (
         <p>{props.mealtypeBody}</p>
     </div><br/>
     <div className="cst">
-        <center>{props.mealtypeCost}</center>
+        <center>{props.mealtypeTcost}</center>
     </div><br/>
     <div className="chk-out" ref={ref}>
         {props.mealtypeName === "Immune"? (<button> <a href="./#/immune">Go to Immune</a></button>):
-( props.mealtypeName === "Picky Eaters"? (<button> <a href="./#/pickyeaters">Go to Picky Eaters</a></button>):(
-    
+        (props.mealtypeName === "Picky Eaters"? (<button> <a href="./#/pickyeaters">Go to Picky Eaters</a></button>):(
+   
         checkout ? ( <PayPal desc={props.mealtypeName} amnt={props.mealtypeCost} items={[""]}/>
-        ):(
+        ):(props.loggedIn?(
             <button onClick={()=> {setCheckOut(true)}}>Purchase</button>
-        )       )  ) }
+        ):(<Login button/>) )      )  ) }
     </div>
     </div>
     )
