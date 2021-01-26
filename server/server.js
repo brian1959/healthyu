@@ -54,7 +54,8 @@ app.get("/auth/callback", async (req, res) => {
 		redirect_uri: `http://${req.headers.host}/auth/callback`,
 	};
 	//trade the code for a token
-
+console.log('req Header', req.headers.host)
+console.log('req query', req.query)
 	try {
 		let resWithToken = await axios.post(
 			`https://${REACT_APP_DOMAIN}/oauth/token`,
@@ -72,12 +73,12 @@ app.get("/auth/callback", async (req, res) => {
 		if (foundUser[0]) {
 			req.session.user = foundUser[0];
 			console.log("ReqUser", req.session.user);
-			res.redirect("/#/member");
+			res.redirect(`/#${req.query.pgrtrn}`);
 		} else {
 			let createdUser = await db.create_user(given_name, family_name, email, sub);
 			console.log("NewUser", createdUser[0]);
 			req.session.user = createdUser[0];
-			res.redirect("/#/pickyeaters");
+			res.redirect(`/#${req.query.pgrtrn}`);
 		}
 	} catch (err) {
 		console.log(err);
