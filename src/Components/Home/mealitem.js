@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useRef} from "react";
 import PayPal from '../PayPal';
-import Login from '../Login/login'
+import Login from '../Login/login';
+
 export default function MealType(props) {
 
 const ref = useRef();

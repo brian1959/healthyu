@@ -3,7 +3,7 @@ import PayPal from '../PayPal';
 import axios from "axios";
 import PeMealType from './pemealitem';
 import styled from 'styled-components';
-
+import Login from '../Login/login';
 
 const Button = styled.button`
   height: 12%;
@@ -44,7 +44,8 @@ export default class Pickyeaters extends Component {
       checkoutButton: false,
       mypurItems:[],
       purItems:[],
-      allmealtypes:[]
+      allmealtypes:[],
+      logdin:false
     };
   }
 
@@ -57,8 +58,13 @@ export default class Pickyeaters extends Component {
       this.setState({ mypurItems: purchases.data });
     });
 
+
     axios.get("api/pemeal").then(mealtypes => {
       this.setState({allmealtypes:mealtypes.data});
+    });
+
+    axios.get("api/member").then(response => {
+      this.setState({logdin:(response.data? true:false)})
     });
   
   }
@@ -123,10 +129,6 @@ export default class Pickyeaters extends Component {
   }
 
   render() {
-    console.log("Past Purchases",this.state.mypurItems)
-    console.log("meal cost",this.state.mealAdjTotal)
-    console.log("meal type",this.state.displayMealType)
-    console.log("cost array",this.state.displayMealCost)
 
     return (
       <div className="nibble-main">
@@ -156,7 +158,7 @@ export default class Pickyeaters extends Component {
         </div>
         <center>
           {this.state.displayMealCost[0]>0 ? ( <div className="payment-button"> 
-          {this.state.checkout ? ( <PayPal desc={this.state.purDesc} amnt={this.state.mealAdjTotal} items={this.state.displayMealType}/>):(<Button onClick={()=> {this.handleCheckOut()}}>Purchase</Button>)}   
+          {this.state.checkout ? ( <PayPal desc={this.state.purDesc} amnt={this.state.mealAdjTotal} items={this.state.displayMealType}/>):this.state.logdin?(<Button onClick={()=> {this.handleCheckOut()}}>Purchase</Button>):(<Login button/>)}   
         </div>):("")}
        
         </center> 
