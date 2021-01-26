@@ -40,10 +40,11 @@ class Navbar extends Component {
     let menuBtn = document.querySelector(".menu-btn");
     this.setState({ menuShow: false });
     menuBtn.classList.remove("close");
+    //Look at this for re-render issues that can be a resource drain.
   }
 
   render() {
-    console.log("Purchases", this.state.mypurchases)
+   
     return (
       <div>
         <div className="navbar fixed-top">

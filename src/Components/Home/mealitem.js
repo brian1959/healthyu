@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from "react";
 import PayPal from '../PayPal';
-
+import Login from '../Login/login'
 export default function MealType(props) {
 
 const ref = useRef();
@@ -55,12 +55,12 @@ return (
     </div><br/>
     <div className="chk-out" ref={ref}>
         {props.mealtypeName === "Immune"? (<button> <a href="./#/immune">Go to Immune</a></button>):
-( props.mealtypeName === "Picky Eaters"? (<button> <a href="./#/pickyeaters">Go to Picky Eaters</a></button>):(
+        (props.mealtypeName === "Picky Eaters"? (<button> <a href="./#/pickyeaters">Go to Picky Eaters</a></button>):(
    
         checkout ? ( <PayPal desc={props.mealtypeName} amnt={props.mealtypeCost} items={[""]}/>
-        ):(
-            <button onClick={()=> {setCheckOut(true)}}>Get started</button>
-        )       )  ) }
+        ):(props.loggedIn?(
+            <button onClick={()=> {setCheckOut(true)}}>Purchase</button>
+        ):(<Login button/>) )      )  ) }
     </div>
     </div>
     )

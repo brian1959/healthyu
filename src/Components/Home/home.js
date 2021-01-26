@@ -7,23 +7,22 @@ function Home() {
 
        document.title = "Healthy U";
        const [mealtypedata, setMealtypedata] = useState([])
+       const [logdin, setLogdin]= useState(false)
+
+       const getHomeMeals=() =>{ axios.get("/api/homemeals").then(response => {setMealtypedata(response.data) });
+      };
+
+        const getLoginData = () => {axios.get("/api/member").then(response => {setLogdin(response.data? true:false) });
+};
    
        useEffect(() => {
-       axios.get("/api/homemeals").then(response => {
-        setMealtypedata(response.data)
-      });
-    },[setMealtypedata, mealtypedata]);
-
-    const [logdin, setLogdin]= useState(false)
-    useEffect(() => {
-      axios.get("/api/member").then(response => {
-        setLogdin(response.data? true:false)
-      });
-    }, [setLogdin, logdin] );
-    console.log('logged In', logdin)
+         getHomeMeals()
+         getLoginData()
+         console.log("login State", logdin)
+        }, [logdin]);
+  
  
     return (
-    
       <div className="landing">
         <div className="landing-hero">
           <div className="landing-herovid">
@@ -63,6 +62,7 @@ function Home() {
     mealtypeBody={mealtype.mtbody}
     mealtypeTcost={mealtype.mttxtcost}
     mealtypeCost={mealtype.mtcost}
+    loggedIn={logdin}
     />
   ))}
                 </div>
