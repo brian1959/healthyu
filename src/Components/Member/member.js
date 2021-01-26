@@ -39,58 +39,29 @@ class Profile extends Component {
     const {
       mfirstname,
       mlastname,
-      maddress,
-      mcity,
-      mstate,
-      mzip,
-      mphone,
       memail
     } = member;
-console.log("purchase detail", mypurchases)
+
     return (
       <div className="member-wrapper">
         <div className="member-details-wrapper">
           <section className="profile-holder">
-            <div className="profile-item-holder name">
+           <div className="profile-name">
               {`${mfirstname} ${mlastname}`}
             </div>
-            <div className="profile-item-holder ">
-              <div className="profile-item-type">Address:</div>
-              <div className="profile-item"> {maddress}</div>
-            </div>
-            <div className="profile-item-holder">
-              <div className="profile-item-type">City:</div>
-              <div className="profile-item"> {mcity}</div>
-            </div>
-            <div className="profile-item-holder">
-              <div className="profile-item-type">State:</div>
-              <div className="profile-item"> {mstate}</div>
-            </div>
-            <div className="profile-item-holder">
-              <div className="profile-item-type">Zip: </div>
-              <div className="profile-item">{mzip}</div>
-            </div>
-            <div className="profile-item-holder">
-              <div className="profile-item-type">Phone:</div>
-              <div className="profile-item">{mphone}</div>
-            </div>
-            <div className="profile-item-holder">
-              <div className="profile-item-type">email:</div>
+
               <div className="profile-item"> {memail}</div>
-            </div>
+
           </section>
           <section className="my-purchases-selector">
-            <div className="my-purchases-title">Current purchases</div>
-            <div className="my-purchases-column-headers">
-              <div className="my-purchases-header header-class">Available Classes</div>
-            </div>
+            <div className="my-purchases-title">Access Purchases</div>
+
+
             <div className="my-purchases-details-wrapper">
               {mypurchases.map(eachpurchase => (
                 <Mypurchases
                   key={eachpurchase.detailid}
-                  ordernum={eachpurchase.ppid}
                   purchasetitle={eachpurchase.puritem}
-                  purchasecost={eachpurchase.stdcost}
                 />
               ))}
             </div>

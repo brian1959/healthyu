@@ -16,7 +16,7 @@ export default class Foodfocus extends Component {
           <div className="inst-vids-container">
             <div className="inst-vids-wrapper">
               <div className="snk-vids">
-                <iframe height="100%" 
+                <iframe 
                 title="Food Focus"
                src="https://drive.google.com/file/d/1TknIdLt8vJ49pAO9_kZ_gKML9mPO_Vdu/preview" allow="fullscreen" />
                 <h2>Make Health a Priority</h2>

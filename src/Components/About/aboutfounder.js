@@ -6,7 +6,7 @@ export default class About extends Component {
     return (
       <div className="about-main">
         <div className="about-main-title">Kandis Mortensen</div>
-        <a href="https://nutritionstudies.org/courses/plant-based-nutrition/" title="Plant-based Nutrition Certificate Badge"><img src="https://nutritionstudies.org/images/graduate-badge.png" width="250" alt="Grad Badge"/></a><br/>
+        <a href="https://nutritionstudies.org/courses/plant-based-nutrition/" title="Plant-based Nutrition Certificate Badge"><img src="https://nutritionstudies.org/images/graduate-badge.png" width="150" alt="Grad Badge"/></a><br/>
         <section className="about-expect">
           <div className="about-header-box">
             <img

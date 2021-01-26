@@ -18,7 +18,7 @@ export default class Pregnancy extends Component {
           <div className="inst-vids-container">
             <div className="inst-vids-wrapper">
               <div className="snk-vids">
-                <iframe height="100%" title="Pregnancy" src="https://drive.google.com/file/d/1ZyALiWyEPddNEbJmvvZvt4ytmWJEqyNO/preview"/><h2>Ideal Nutrition for Pregnancy and Children</h2>
+                <iframe   title="Pregnancy" src="https://drive.google.com/file/d/1ZyALiWyEPddNEbJmvvZvt4ytmWJEqyNO/preview"/><h2>Ideal Nutrition for Pregnancy and Children</h2>
                 
               </div>
             </div>

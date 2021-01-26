@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import logo from "../../images/hu2logo.png";
 import HealthyU from "../../images/HealthyU.png";
 import tagline from "../../images/hutagline.png";
+import Login from "../Login/login";
+import axios from "axios";
 import onClickOutside from "react-onclickoutside";
 
 class Navbar extends Component {
@@ -11,7 +13,15 @@ class Navbar extends Component {
 
     this.state = {
       menuShow: false,
+      memberShow:false
     };
+  }
+
+  componentDidMount(){
+console.log("Props", this.props)
+    axios.get("/api/member").then(purchases => {
+      this.setState({ mypurchases: purchases.data[0]});
+    });
   }
 
   showMenu() {
@@ -30,9 +40,11 @@ class Navbar extends Component {
     let menuBtn = document.querySelector(".menu-btn");
     this.setState({ menuShow: false });
     menuBtn.classList.remove("close");
+    //Look at this for re-render issues that can be a resource drain.
   }
 
   render() {
+   
     return (
       <div>
         <div className="navbar fixed-top">
@@ -41,6 +53,9 @@ class Navbar extends Component {
             <div className="companywrapper">
               <img className="c-company" src={HealthyU} alt="Healthy U" />
               <img className="c-tag" src={tagline} alt="tag line" />
+            </div>
+            <div className="login-box">
+            <Login/>
             </div>
             <div className="menu-box">
               <div className="menu-items-holder">
@@ -68,38 +83,6 @@ class Navbar extends Component {
           <div className="navbar-column-link-wrapper">
             <div className="navbar-column-link-box">
               <div className="navbar-column-title">Programs & Services</div>
-              <Link to="/nibble">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  Nibbles
-                </div>
-              </Link>
-              <Link to="/snack">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  Snacks
-                </div>
-              </Link>
-              <Link to="/dine">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  Dine
-                </div>
-              </Link>
-              <Link to="/feast">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  Feast
-                </div>
-              </Link>
               <Link to="/pickyeaters">
                 <div
                   className="navbar-column-link"
@@ -143,7 +126,6 @@ class Navbar extends Component {
                   className="navbar-column-link"
                   onClick={() => this.showMenu()}
                 >
-                  {" "}
                   Free Resources
                 </div>
               </Link>
@@ -160,100 +142,19 @@ class Navbar extends Component {
                   Home
                 </div>
               </Link>
+              {this.state.mypurchases ?
+              <Link to="/member">
+                <div
+                  className="navbar-column-link"
+                  onClick={() => this.showMenu()}
+                >
+              
+                  My Access
+                </div>
+              </Link>: "" }
             </div>
-            <div className="navbar-column-link-box">
-              <div className="navbar-column-title">All Access</div>
-              <Link to="/autoimmune">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-            
-                  Autoimmune
-                </div>
-              </Link>
-              <Link to="/environment">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  {" "}
-                  Environment
-                </div>
-              </Link>
-              <Link to="/foodfocus">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  {" "}
-                  Food Focus
-                </div>
-              </Link>
-              <Link to="/foryourfamily">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  {" "}
-                  For Your Family
-                </div>
-              </Link>
-              <Link to="/level50">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  {" "}
-                  Level 50+
-                </div>
-              </Link>
-              <Link to="/men">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  {" "}
-                  Men
-                </div>
-              </Link>
-              <Link to="/pregnancy">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  {" "}
-                  Pregnancy
-                </div>
-              </Link>
-              <Link to="/recipes">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  {" "}
-                  Recipes
-                </div>
-              </Link>
-              <Link to="/vegan">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  {" "}
-                  The Lonely Vegan
-                </div>
-              </Link>
-              <Link to="/women">
-                <div
-                  className="navbar-column-link"
-                  onClick={() => this.showMenu()}
-                >
-                  {" "}
-                  Women
-                </div>
-              </Link>
-            </div>
+           
+             
           </div>
         </div>
       </div>

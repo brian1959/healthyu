@@ -3,8 +3,8 @@ module.exports = {
   addOrderHeader: (req, res) => {
     const db = req.app.get("db");
     const {oid, amount} = req.body
-    const { user_id } = 10;
-    db.add_orderheader(oid, 10, amount)
+    let { memid } = req.session.user;
+    db.add_orderheader(oid, memid, amount)
       .then(res.sendStatus(200))
       .catch(err => {
         res.status(500).send({
@@ -27,12 +27,46 @@ module.exports = {
 
   getMemberPrivs: (req, res) => {
     const db = req.app.get("db");
-    // let { user_id } = req.session.user;
-    db.get_privs_by_memid([1])
+    let { memid } = req.session.user;
+    db.get_privs_by_memid([memid])
       .then(privs => res.status(200).send(privs))
       .catch(err => {
         res.status(500).send({
           errorMessage: "Failed to get privileges"
+        });
+      })
+  },
+
+  getAccessPrivs: (req, res) => {
+    const db = req.app.get("db");
+    let { memid } = req.session.user; 
+    db.get_priv_item_by_memid([memid])
+      .then(privs => res.status(200).send(privs))
+      .catch(err => {
+        res.status(500).send({
+          errorMessage: "Failed to get privileges"
+        });
+      })
+  },
+
+  getHomeMealTypes: (req, res) => {
+    const db = req.app.get("db");
+    db.get_meal_types_home()
+      .then(meals => res.status(200).send(meals))
+      .catch(err => {
+        res.status(500).send({
+          errorMessage: "Failed to get meal types"
+        });
+      })
+  },
+  
+  getPickyeaterMealTypes: (req, res) => {
+    const db = req.app.get("db"); 
+    db.get_meal_types_all()
+      .then(meals => res.status(200).send(meals))
+      .catch(err => {
+        res.status(500).send({
+          errorMessage: "Failed to get meal types"
         });
       })
   }

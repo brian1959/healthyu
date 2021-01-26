@@ -15,7 +15,7 @@ export default class Level50 extends Component {
           <div className="inst-vids-container">
             <div className="inst-vids-wrapper">
               <div className="snk-vids">
-                  <iframe height="100%" title="50+" src="https://drive.google.com/file/d/1oRCmZ-lrsbf7jOq5ktAECaJSexoPneky/preview" allow="fullscreen" />
+                  <iframe  title="50+" src="https://drive.google.com/file/d/1oRCmZ-lrsbf7jOq5ktAECaJSexoPneky/preview" allow="fullscreen" />
                 <h2>Make Health a Priority</h2>
               </div>
             </div>
