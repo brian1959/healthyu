@@ -18,7 +18,7 @@ class Navbar extends Component {
   }
 
   componentDidMount(){
-
+console.log("Props", this.props)
     axios.get("/api/member").then(purchases => {
       this.setState({ mypurchases: purchases.data[0]});
     });
