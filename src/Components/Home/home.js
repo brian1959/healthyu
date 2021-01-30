@@ -62,6 +62,7 @@ function Home() {
     mealtypeBody={mealtype.mtbody}
     mealtypeTcost={mealtype.mttxtcost}
     mealtypeCost={mealtype.mtcost}
+    mealtypeLink={mealtype.mtlinkname}
     loggedIn={logdin}
     />
   ))}

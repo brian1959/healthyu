@@ -55,13 +55,11 @@ return (
         <center>{props.mealtypeTcost}</center>
     </div><br/>
     <div className="chk-out" ref={ref}>
-        {props.mealtypeName === "Immune"? (<button className="login-button"> <a href="./#/immune">Go to Immune</a></button>):
-        (props.mealtypeName === "Picky Eaters"? (<button className="login-button"> <a href="./#/pickyeaters">Go to Picky Eaters</a></button>):(
-   
+        { (props.mealtypeCost <1? (<button className="login-button"> <a href={`/#/${props.mealtypeLink}`}>Learn More</a></button>):(
         checkout ? ( <PayPal desc={props.mealtypeName} amnt={props.mealtypeCost} items={[""]}/>
         ):(props.loggedIn?(
             <button className="login-button" onClick={()=> {setCheckOut(true)}}>Purchase</button>
-        ):(<Login button/>) )      )  ) }
+        ):(<Login button/>) ) ) ) }
     </div>
     </div>
     )
