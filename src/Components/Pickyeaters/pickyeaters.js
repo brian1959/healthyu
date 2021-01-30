@@ -2,30 +2,8 @@ import React, { Component} from "react";
 import PayPal from '../PayPal';
 import axios from "axios";
 import PeMealType from './pemealitem';
-import styled from 'styled-components';
 import Login from '../Login/login';
 
-const Button = styled.button`
-  height: 12%;
-  width: 10%;
-  top: 50%;
-  left:50%;
-  font-size: 2.6vmin;
-  cursor: pointer;
-  box-shadow: rgba(255, 255, 255, 0.05) 0px 5px 20px;
-  border-width: initial;
-  background-color: royalblue;
-  color: white;
-  border-style: shaded
-  border-color: darkblue;
-  border-image: initial;
-  outline: none;
-  &:hover {
-        background-color: #445b65;
-        color: white;
-  }
-
-`
 export default class Pickyeaters extends Component {
   constructor(props) {
     super(props)
@@ -57,7 +35,6 @@ export default class Pickyeaters extends Component {
     axios.get("/api/accessprivs").then(purchases => {
       this.setState({ mypurItems: purchases.data });
     });
-
 
     axios.get("api/pemeal").then(mealtypes => {
       this.setState({allmealtypes:mealtypes.data});
@@ -158,7 +135,7 @@ export default class Pickyeaters extends Component {
         </div>
         <center>
           {this.state.displayMealCost[0]>0 ? ( <div className="payment-button"> 
-          {this.state.checkout ? ( <PayPal desc={this.state.purDesc} amnt={this.state.mealAdjTotal} items={this.state.displayMealType}/>):this.state.logdin?(<Button onClick={()=> {this.handleCheckOut()}}>Purchase</Button>):(<Login button/>)}   
+          {this.state.checkout ? ( <PayPal desc={this.state.purDesc} amnt={this.state.mealAdjTotal} items={this.state.displayMealType}/>):this.state.logdin?(<button className="login-button" onClick={()=> {this.handleCheckOut()}}>Purchase</button>):(<Login button/>)}   
         </div>):("")}
        
         </center> 

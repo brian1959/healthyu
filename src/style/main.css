@@ -261,6 +261,7 @@ a:active {
 }
 
 .companywrapper {
+  margin-top:10px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -446,9 +447,9 @@ nav {
 
 .navbar {
   width: 100%;
-  height: 165px;
+  height: 100px;
   background-image: url(../images/modal-bg22.gif);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: 100%;
   font-family: "Open Sans", Zoram, "noto sans", Helvetica, Arial, sans-serif;
   display: flex;
@@ -687,7 +688,7 @@ nav {
   }
 
   .c-logo {
-    margin: 0 10px 15px 0;
+    margin: 10px 10px 5px 0;
     height: 50px;
     width: 50px;
   }
@@ -729,9 +730,25 @@ nav {
   .login-box{
     position: absolute;
     z-index: 4;
-    top: 2px;
+    top: 8px;
     right:5%; 
     font-size: 12px;
+  }
+
+  .login-button{
+    font-size: 20px;
+    font-weight: 400;
+    background-color: royalblue;
+    color: white;
+    border-style:solid;
+    border-color: darkblue;
+    height: 100%;
+    width: 80%;
+    margin: 15px;
+  }
+
+  .login-button a{
+    color: white;
   }
 
   .header-spacer {
@@ -786,6 +803,10 @@ nav {
     width: 300px;
   }
 
+  .meal-boxes-container{
+    margin:10px 10px;
+  }
+  
   .meal-text {
     font-weight: 300;
     margin: 0 15px 20px 15px;
@@ -833,7 +854,8 @@ nav {
     display: flex;
     flex-direction: row;
     cursor: pointer;
-    padding-left: 80px;
+    padding-left: 60px;
+    margin-right: 10px;
   }
 
   .navbar {
@@ -961,7 +983,20 @@ nav {
   }
 }
 
+@media(min-width:333px){
+  
+  .login-btn{
+    font-size: 18px;
+  }
+
+  .menu-items-holder{
+    margin-right: 0;
+    padding-left: 80px;
+  } 
+}
+
 @media (min-width: 539px) {
+
 
   .login-box{
     top: 10px;
@@ -970,6 +1005,10 @@ nav {
 
   .login-btn{
     font-size: 16px;
+  }
+
+  .login-button{
+    font-size: 22px;
   }
 }
 
@@ -1024,7 +1063,7 @@ nav {
   }
 
   .c-logo {
-    margin: 0 0 15px 5px;
+    margin: 15px 0 10px 5px;
     width: 100px;
     height: 100px;
   }
@@ -1247,7 +1286,7 @@ nav {
   }
 
   .companywrapper {
-
+margin-top: 10px;
   }
 
   .digdeeper-text {
@@ -1357,6 +1396,10 @@ nav {
     font-size: 24px;
     margin-left: 15px;
     margin-top: 15px;
+  }
+
+  .menu-items-holder{
+    margin-top: 40px;
   }
 
   .navbar{
