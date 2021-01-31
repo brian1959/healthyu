@@ -30,7 +30,7 @@ function Home() {
                   title="Welcome"
                    src="https://drive.google.com/file/d/1Agkpz2NNJrhbT6ULsSJRxh1ioSS7ZokT/preview?start=1" allow="fullscreen" />
           </div>
-          <a href="https://nutritionstudies.org/courses/plant-based-nutrition/" title="Plant-based Nutrition Certificate Badge"><img src="https://nutritionstudies.org/images/graduate-badge.png" width="150" alt="Grad Badge"/></a>
+          <img src="https://nutritionstudies.org/images/graduate-badge.png" width="150" alt="Grad Badge"/>
           <div className="overlay-promo">Eat your way to a better life</div>
           <div className="overlay-promo-text">
             Welcome to the HealthyU2 website! This site was created to help you

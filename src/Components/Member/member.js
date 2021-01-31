@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Mypurchases from "./mypurchases"
+import Mypurchases from "./mypuritems"
 
 
 class Profile extends Component {

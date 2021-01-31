@@ -11,7 +11,7 @@ export default class Free extends Component {
           All you need is a library card or an internet connection for access to
           the information here. I’ve listed them in order of popularity. Scroll
           through to find invaluable information about how eating WFPB can heal
-          individuals and the world!
+          individuals and the world! Follow me on instagram <a href='http://www.instagram.com/kandishealthyu2'>@kandishealthyu2</a> for even more great resources and reference materials.
           <br /><br/>
           Great Documentaries to get you started (these documentaries may be available on Netflix but you can rent them from YouTube for a small fee):<br/>
 
