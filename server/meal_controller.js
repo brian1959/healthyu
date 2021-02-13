@@ -16,8 +16,6 @@ module.exports = {
   addOrderDetail:async (req, res) => {
     const db = req.app.get("db");
     const {meals, oid, idesc} = req.body
-    console.log('meals', meals)
-    console.log("Order Number", oid)
     if (meals[0] === ""){ db.add_orderdetail(oid,idesc)
     }
      else {meals.forEach(item => 

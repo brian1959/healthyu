@@ -35,8 +35,7 @@ class Profile extends Component {
   }
 
   render() {
-    console.log('My Purchases',this.state.mypurchases)
-    console.log('Member',this.state.member)
+
     const { mypurchases } = this.state;
     const { member } = this.state;
     const {

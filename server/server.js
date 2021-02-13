@@ -25,7 +25,6 @@ const {
 massive(CONNECTION_STRING)
 	.then((db) => {
 		app.set("db", db);
-		console.log("DB connected");
 	})
 	.catch((err) => console.log(err));
 
@@ -54,8 +53,6 @@ app.get("/auth/callback", async (req, res) => {
 		redirect_uri: `http://${req.headers.host}/auth/callback`,
 	};
 	//trade the code for a token
-console.log('req Header', req.headers.host)
-console.log('req query', req.query)
 	try {
 		let resWithToken = await axios.post(
 			`https://${REACT_APP_DOMAIN}/oauth/token`,
@@ -65,18 +62,15 @@ console.log('req query', req.query)
 		let resWithUserData = await axios.get(
 			`https://${REACT_APP_DOMAIN}/userinfo?access_token=${resWithToken.data.access_token}`
 		);
-		console.log("User", resWithUserData.data);
 
 		let { email, given_name, family_name, sub } = resWithUserData.data;
 		let db = app.get("db");
 		let foundUser = await db.find_user([sub]);
 		if (foundUser[0]) {
 			req.session.user = foundUser[0];
-			console.log("ReqUser", req.session.user);
 			res.redirect(`/#${req.query.pgrtrn}`);
 		} else {
 			let createdUser = await db.create_user(given_name, family_name, email, sub);
-			console.log("NewUser", createdUser[0]);
 			req.session.user = createdUser[0];
 			res.redirect(`/#${req.query.pgrtrn}`);
 		}
@@ -102,7 +96,6 @@ app.get("/api/user-data", envCheck, (req, res) => {
 
 	if (req.session.user) {
 	  res.status(200).send(req.session.user);
-	  console.log("reqUser",req.session.user)
 	} else {
 	  res.status(401).send("Unauthorized");
 	}

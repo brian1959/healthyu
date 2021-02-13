@@ -20,7 +20,7 @@ class Navbar extends Component {
   }
 
   componentDidMount(){
-console.log("Props", this.props)
+
     axios.get("/api/member").then(purchases => {
       this.setState({ mypurchases: purchases.data[0]});
     });
@@ -50,7 +50,7 @@ console.log("Props", this.props)
   }
 
   render() {
-    console.log("My Items",this.state.mypuritems)
+
     return (
       <div>
         <div className="navbar fixed-top">

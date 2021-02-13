@@ -28,8 +28,6 @@ onApprove: async (data, actions) => {
     const idesc = props.desc
     axios.post('./api/orderheader',{oid,amount})
     axios.post('./api/orderdetail',{meals,oid, idesc})
-    console.log("order id", order.id)
-    console.log("order info", order.purchase_units[0])
 },
 onError: (err) => {
 
