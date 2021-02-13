@@ -6,6 +6,7 @@ import tagline from "../../images/hutagline.png";
 import Login from "../Login/login";
 import axios from "axios";
 import onClickOutside from "react-onclickoutside";
+import Mpitems from "./mpitems"
 
 class Navbar extends Component {
   constructor(props) {
@@ -13,7 +14,8 @@ class Navbar extends Component {
 
     this.state = {
       menuShow: false,
-      memberShow:false
+      memberShow:false,
+      mypuritems:[]
     };
   }
 
@@ -21,6 +23,10 @@ class Navbar extends Component {
 console.log("Props", this.props)
     axios.get("/api/member").then(purchases => {
       this.setState({ mypurchases: purchases.data[0]});
+    });
+    
+    axios.get("/api/memberprivs").then(mp => {
+      this.setState({ mypuritems: mp.data });
     });
   }
 
@@ -44,7 +50,7 @@ console.log("Props", this.props)
   }
 
   render() {
-   
+    console.log("My Items",this.state.mypuritems)
     return (
       <div>
         <div className="navbar fixed-top">
@@ -131,31 +137,39 @@ console.log("Props", this.props)
               </Link>
             </div>
             <div className="navbar-column-link-box">
-     
               <div className="navbar-column-title">Home</div>
               <Link to="/">
                 <div
                   className="navbar-column-link"
                   onClick={() => this.showMenu()}
                 >
-              
                   Home
                 </div>
               </Link>
-              {this.state.mypurchases ?
+            </div>
+            {this.state.mypurchases ? (
+            <div className="navbar-column-link-box">
+              <div className="navbar-column-title">My Access</div>
               <Link to="/member">
                 <div
                   className="navbar-column-link"
                   onClick={() => this.showMenu()}
                 >
-              
                   My Access
                 </div>
-              </Link>: "" }
+              </Link>
+              {this.state.mypuritems.map(mp => (
+                    <Mpitems
+                      key={mp.detailid}
+                      mpName = {mp.puritem}
+                      mpLink = {mp.mtlinkname}
+                      showMenu = {this.showMenu}
+                    />
+                    ) )}
             </div>
-           
-             
-          </div>
+                        ):""}
+            </div>
+
         </div>
       </div>
     );

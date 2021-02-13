@@ -7,7 +7,7 @@ export default function Mypuritems(props) {
     return(
         <Link to={`/${props.mppuritem}`}>
           <div
-            className="navbar-column-link"
+            className="my-purchases-details-wrapper"
             onClick={() => this.showMenu()}
           >
         

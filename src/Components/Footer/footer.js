@@ -5,6 +5,8 @@ export default function Footer(props) {
   return (
     <div className="footer-main">
       <div className="footer-form">
+        instagram
+        
       </div>
     </div>
   );

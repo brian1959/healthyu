@@ -23,7 +23,9 @@ class Profile extends Component {
 
     axios.get("/api/memberprivs").then(purchases => {
       this.setState({ mypurchases: purchases.data });
+  
     });
+    
   }
 
 
@@ -33,8 +35,9 @@ class Profile extends Component {
   }
 
   render() {
+    console.log('My Purchases',this.state.mypurchases)
+    console.log('Member',this.state.member)
     const { mypurchases } = this.state;
-
     const { member } = this.state;
     const {
       mfirstname,
@@ -61,7 +64,7 @@ class Profile extends Component {
               {mypurchases.map(eachpurchase => (
                 <Mypurchases
                   key={eachpurchase.detailid}
-                  purchasetitle={eachpurchase.puritem}
+                  mppuritem={eachpurchase.puritem}
                 />
               ))}
             </div>

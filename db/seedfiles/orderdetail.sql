@@ -3,10 +3,10 @@ create table order_detail  (detailid Serial Primary Key, ppid VARCHAR, puritem V
 insert into order_detail (ppid, puritem, stdcost)
 
 VALUES
-('1','nibble',10),
-('2', 'snack', 25),
-('3', 'feast', 75),
-('1', 'autoimmune',5), 
-('4','dine',25),
-('4','snack',10),
-('4','pregnancy',10);
+('1','Nibble',10),
+('2', 'Snack', 25),
+('3', 'Feast', 75),
+('1', 'Autoimmune',5), 
+('4','Dine',25),
+('4','Snack',10),
+('4','Pregnancy',10);

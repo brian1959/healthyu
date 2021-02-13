@@ -423,6 +423,7 @@ a:active {
   flex-wrap: wrap;
   flex-direction: row;
   font-size: larger;
+  justify-content: space-evenly;
 }
 
 .my-purchases-container{
@@ -439,6 +440,7 @@ a:active {
   text-align: center;
   margin: 20px;
 }
+
 nav {
   display: none;
   justify-content: space-evenly;
