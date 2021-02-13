@@ -4,6 +4,8 @@ import {withRouter} from 'react-router-dom';
 
 
 function Login(props) {
+	const Disclaimer = "We need this information solely to give you access to the things you buy.  HealthyU2 does not sell your information nor will we use it to solicit you in any way."
+
 	const login = () => {
 		let { REACT_APP_DOMAIN, REACT_APP_CLIENT_ID } = process.env;
 		let uri = `${encodeURIComponent(window.location.origin)}/auth/callback?pgrtrn=${props.location.pathname}`;
@@ -21,6 +23,7 @@ function Login(props) {
 				Login
 						</div>
 			)
+
 
 		);
 	}

@@ -18,7 +18,6 @@ function Home() {
        useEffect(() => {
          getHomeMeals()
          getLoginData()
-         console.log("login State", logdin)
         }, [logdin]);
   
  
