@@ -12,6 +12,8 @@ const app = express();
 
 //db connection
 
+app.use( express.static( `${__dirname}/../build` ) )
+
 const {
 	SERVER_PORT,
 	SESSION_SECRET,
