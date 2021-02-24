@@ -25,7 +25,7 @@ module.exports = {
 
   getMemberPrivs: (req, res) => {
     const db = req.app.get("db");
-    let { memid } = req.session.user;
+    const { memid=0 } = req.session.user;
     db.get_privs_by_memid([memid])
       .then(privs => res.status(200).send(privs))
       .catch(err => {
@@ -37,7 +37,7 @@ module.exports = {
 
   getAccessPrivs: (req, res) => {
     const db = req.app.get("db");
-    let { memid } = req.session.user; 
+    const { memid=0} = req.session.user; 
     db.get_priv_item_by_memid([memid])
       .then(privs => res.status(200).send(privs))
       .catch(err => {
