@@ -53,7 +53,7 @@ app.get("/auth/callback", async (req, res) => {
 		client_secret: CLIENT_SECRET,
 		code: req.query.code,
 		grant_type: "authorization_code",
-		redirect_uri: `http://${req.headers.host}/auth/callback`,
+		redirect_uri: `https://${req.headers.host}/auth/callback`,
 	};
 	//trade the code for a token
 	try {
@@ -63,7 +63,7 @@ app.get("/auth/callback", async (req, res) => {
 		);
 		//use token to get data
 		let resWithUserData = await axios.get(
-			`http://${REACT_APP_DOMAIN}/userinfo?access_token=${resWithToken.data.access_token}`
+			`https://${REACT_APP_DOMAIN}/userinfo?access_token=${resWithToken.data.access_token}`
 		);
 
 		let { email, given_name, family_name, sub } = resWithUserData.data;
