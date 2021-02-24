@@ -25,7 +25,7 @@ const {
 } = process.env;
 //console.log("Node is running",massive(CONNECTION_STRING))
 massive(CONNECTION_STRING)
-	.then((db) => {
+	.then(db => {
 		console.log("success")
 		app.set("db", db);
 	})
