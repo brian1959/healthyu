@@ -23,7 +23,7 @@ const {
 	CONNECTION_STRING,
 	NODE_ENV,
 } = process.env;
-console.log("Node is running",massive)
+console.log("Node is running",massive(CONNECTION_STRING))
 massive(CONNECTION_STRING)
 	.then((db) => {
 		console.log("success")
