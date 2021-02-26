@@ -24,7 +24,6 @@ const {
 
 massive(CONNECTION_STRING)
 	.then((db) => {
-		console.log('success')
 		app.set("db", db);
 	})
 	.catch((err) => console.log(err));
@@ -52,7 +51,7 @@ app.get("/auth/callback", async (req, res) => {
 		client_secret: CLIENT_SECRET,
 		code: req.query.code,
 		grant_type: "authorization_code",
-		redirect_uri: `https://${req.headers.host}/auth/callback`,
+		redirect_uri: `http://${req.headers.host}/auth/callback`,
 	};
 	//trade the code for a token
 	try {
@@ -115,6 +114,7 @@ app.get("/api/member", gc.getMember);
 app.get("/api/accessprivs", mc.getAccessPrivs);
 app.get("/api/homemeals", mc.getHomeMealTypes);
 app.get("/api/pemeal", mc.getPickyeaterMealTypes);
+app.get("/api/checkaccess",gc.getCheckAccessPrivs);
 app.post("/api/orderheader", mc.addOrderHeader);
 app.post("/api/orderdetail", mc.addOrderDetail);
 

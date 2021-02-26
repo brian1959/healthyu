@@ -24,6 +24,7 @@ module.exports = {
   },
 
   getMemberPrivs: (req, res) => {
+    if (req.session.user) {
     const db = req.app.get("db");
     let { memid } = req.session.user;
     db.get_privs_by_memid([memid])
@@ -33,6 +34,9 @@ module.exports = {
           errorMessage: "Failed to get privileges"
         });
       })
+    } else {
+      
+    }
   },
 
   getAccessPrivs: (req, res) => {

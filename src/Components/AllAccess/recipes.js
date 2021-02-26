@@ -1,9 +1,30 @@
 import React, { Component } from "react";
 import fstrecpdf from "../../images/fstrecipes.pdf";
+import axios from "axios";
 
 export default class Recipes extends Component {
+  constructor(props){
+    super(props)
+
+    this.state = {
+      grantAccess:false
+     
+    };
+  }
+
+  componentDidMount(){
+ 
+    axios.get("/api/checkaccess",{params:{
+      meal: "Meal prep recipes/videos and favorite links"}})
+      .then(access => {
+      this.setState({ grantAccess: access.data[0]?true: false});
+    });
+  }
+
+
   render() {
     document.title = "Recipes";
+    if (this.state.grantAccess)  {
     return (
       <div className="nibble-main">
         <div className="meal-title-wrapper">
@@ -532,5 +553,8 @@ export default class Recipes extends Component {
         </div>
       </div>
     );
+  } else {
+    return <div className="unauthorized">Unauthorized Access</div>; 
+  }
   }
 }

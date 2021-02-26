@@ -36,11 +36,11 @@ export default class Pickyeaters extends Component {
       this.setState({ mypurItems: purchases.data });
     });
 
-    axios.get("api/pemeal").then(mealtypes => {
+    axios.get("/api/pemeal").then(mealtypes => {
       this.setState({allmealtypes:mealtypes.data});
     });
 
-    axios.get("api/member").then(response => {
+    axios.get("/api/member").then(response => {
       this.setState({logdin:(response.data? true:false)})
     });
   

@@ -1,8 +1,28 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 export default class Foryourfamily extends Component {
+  constructor(props){
+    super(props)
+
+    this.state = {
+      grantAccess:false
+     
+    };
+  }
+
+  componentDidMount(){
+ 
+    axios.get("/api/checkaccess",{params:{
+      meal: "For your Family"}})
+      .then(access => {
+      this.setState({ grantAccess: access.data[0]?true: false});
+    });
+  }
+ 
   render() {
     document.title = "For Your Family";
+    if (this.state.grantAccess)  {
     return (
       <div className="nibble-main">
         <div className="meal-title-wrapper">
@@ -47,5 +67,8 @@ src="https://drive.google.com/file/d/1vucBXRHYpd0H1fvqYsfLSUPBND8kZi_P/preview" 
         </div>
       </div>
     );
+  } else {
+    return <div className="unauthorized">Unauthorized Access</div>; 
+  }
   }
 }

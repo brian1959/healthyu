@@ -1,10 +1,29 @@
 import React, { Component } from "react";
 import wsf13pdf from "../../images/wsf13.pdf";
 import fstrecpdf from "../../images/fstrecipes.pdf";
+import axios from "axios";
 
 export default class Feast extends Component {
+  constructor(props){
+    super(props)
+
+    this.state = {
+      grantAccess:false
+     
+    };
+  }
+
+  componentDidMount(){
+ 
+    axios.get("/api/checkaccess",{params:{
+      meal: "Feast"}})
+      .then(access => {
+      this.setState({ grantAccess: access.data[0]?true: false});
+    });
+  }
   render() {
     document.title = "Feast";
+    if (this.state.grantAccess)  {
     return (
       <div className="nibble-main">
         <div className="meal-title-wrapper">
@@ -333,6 +352,8 @@ export default class Feast extends Component {
           </div>
         </div>
       </div>
-    );
+    );} else {
+      return <div className="unauthorized">Unauthorized Access</div>;
+    }
   }
 }

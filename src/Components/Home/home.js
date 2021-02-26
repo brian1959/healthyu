@@ -5,7 +5,7 @@ import axios from 'axios'
 
 function Home() {
 
-       document.title = "Healthy U";
+       document.title = "HealthyU2";
        const [mealtypedata, setMealtypedata] = useState([])
        const [logdin, setLogdin]= useState(false)
 

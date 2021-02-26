@@ -629,6 +629,13 @@ nav {
   margin-bottom: 40px;
 }
 
+.unauthorized{
+  margin-top: 200px;
+  font-weight: bolder;
+  font-size: 2em;
+  text-align: center;
+}
+
 @media (min-width: 276px) {
    
   .about-expo-feature-box {

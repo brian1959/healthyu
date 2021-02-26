@@ -1,8 +1,29 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 export default class Autoimmune extends Component {
+  constructor(props){
+    super(props)
+
+    this.state = {
+      grantAccess:false
+     
+    };
+  }
+
+  componentDidMount(){
+ 
+    axios.get("/api/checkaccess",{params:{
+      meal: "Autoimmune"}})
+      .then(access => {
+      this.setState({ grantAccess: access.data[0]?true: false});
+    });
+  }
+
+
   render() {
     document.title = "Autoimmune";
+    if (this.state.grantAccess)  {
     return (
       <div className="nibble-main">
         <div className="meal-title-wrapper">
@@ -16,11 +37,9 @@ export default class Autoimmune extends Component {
           <div className="inst-vids-container">
             <div className="inst-vids-wrapper">
               <div className="snk-vids">
-               
                 <iframe
                 title="Autoimmune"
-                  source src="https://drive.google.com/file/d/1m6NI7aR8lriUnLTQJEHIpIgKL2AkAMls/preview" allow="fullscreen"/>
-                            
+                  src="https://drive.google.com/file/d/1m6NI7aR8lriUnLTQJEHIpIgKL2AkAMls/preview" allow="fullscreen"/>          
                 <h2>Autoimmune Disorders</h2>
               </div>
             </div>
@@ -53,5 +72,8 @@ export default class Autoimmune extends Component {
         </div>
       </div>
     );
+  } else {
+    return <div className="unauthorized">Unauthorized Access</div>; 
+  }
   }
 }
