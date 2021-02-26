@@ -30,7 +30,7 @@ massive(CONNECTION_STRING)
 	.catch((err) => console.log(err));
 
 //end db connection
-
+app.use( express.static( `${__dirname}/../build` ) )
 app.use(express.json());
 app.use(cors());
 
