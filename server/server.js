@@ -24,6 +24,7 @@ const {
 
 massive(CONNECTION_STRING)
 	.then((db) => {
+		console.log('success')
 		app.set("db", db);
 	})
 	.catch((err) => console.log(err));
@@ -32,6 +33,7 @@ massive(CONNECTION_STRING)
 
 app.use(express.json());
 app.use(cors());
+app.use(express.static(`${__dirname}/../build`));
 
 //session functionality
 
