@@ -60,7 +60,7 @@ app.get("/auth/callback", async (req, res) => {
 		);
 		//use token to get data
 		let resWithUserData = await axios.get(
-			`http://${REACT_APP_DOMAIN}/userinfo?access_token=${resWithToken.data.access_token}`
+			`https://${REACT_APP_DOMAIN}/userinfo?access_token=${resWithToken.data.access_token}`
 		);
 
 		let { email, given_name, family_name, sub } = resWithUserData.data;
