@@ -24,7 +24,6 @@ const {
 
 massive(CONNECTION_STRING)
 	.then((db) => {
-		console.log("success")
 		app.set("db", db);
 	})
 	.catch((err) => console.log(err));
