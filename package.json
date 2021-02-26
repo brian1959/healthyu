@@ -1,5 +1,5 @@
 {
-	"name": "HealthyU2",
+	"name": "healthyu",
 	"version": "0.1.0",
 	"private": true,
 	"main": "server/server.js",

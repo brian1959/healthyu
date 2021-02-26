@@ -1,6 +1,0 @@
-# pack-refs with: peeled fully-peeled sorted 
-5bddb588bcc04eed8a2528a41f4bd232385d92d7 refs/heads/josh/auth0-login
-4d46df16e584f7ca975ef5cee5eb9a9cdb9bb746 refs/heads/josh/eslint-and-prettier
-7c7f48be2d6c1a3e7436f2ca5a1c90e05f3e54c3 refs/heads/main
-5bddb588bcc04eed8a2528a41f4bd232385d92d7 refs/pull/1/head
-4d46df16e584f7ca975ef5cee5eb9a9cdb9bb746 refs/pull/2/head

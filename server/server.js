@@ -12,8 +12,6 @@ const app = express();
 
 //db connection
 
-app.use( express.static( `${__dirname}/../build` ) )
-
 const {
 	SERVER_PORT,
 	SESSION_SECRET,
@@ -23,10 +21,9 @@ const {
 	CONNECTION_STRING,
 	NODE_ENV,
 } = process.env;
-//console.log("Node is running",massive(CONNECTION_STRING))
+
 massive(CONNECTION_STRING)
-	.then(db => {
-		console.log("success")
+	.then((db) => {
 		app.set("db", db);
 	})
 	.catch((err) => console.log(err));
@@ -53,12 +50,12 @@ app.get("/auth/callback", async (req, res) => {
 		client_secret: CLIENT_SECRET,
 		code: req.query.code,
 		grant_type: "authorization_code",
-		redirect_uri: `https://${req.headers.host}/auth/callback`,
+		redirect_uri: `http://${req.headers.host}/auth/callback`,
 	};
 	//trade the code for a token
 	try {
 		let resWithToken = await axios.post(
-			`http://${REACT_APP_DOMAIN}/oauth/token`,
+			`https://${REACT_APP_DOMAIN}/oauth/token`,
 			payload
 		);
 		//use token to get data
