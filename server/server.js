@@ -25,6 +25,7 @@ const {
 massive(CONNECTION_STRING)
 	.then((db) => {
 		app.set("db", db);
+		console.log("DB connected");
 	})
 	.catch((err) => console.log(err));
 
@@ -39,7 +40,7 @@ app.use(
 	session({
 		secret: SESSION_SECRET,
 		resave: false,
-		saveUninitialized: true
+		saveUninitialized: true,
 	})
 );
 
@@ -70,7 +71,12 @@ app.get("/auth/callback", async (req, res) => {
 			req.session.user = foundUser[0];
 			res.redirect(`/#${req.query.pgrtrn}`);
 		} else {
-			let createdUser = await db.create_user(given_name, family_name, email, sub);
+			let createdUser = await db.create_user(
+				given_name,
+				family_name,
+				email,
+				sub
+			);
 			req.session.user = createdUser[0];
 			res.redirect(`/#${req.query.pgrtrn}`);
 		}
@@ -93,20 +99,18 @@ function envCheck(req, res, next) {
 	}
 }
 app.get("/api/user-data", envCheck, (req, res) => {
-
 	if (req.session.user) {
-	  res.status(200).send(req.session.user);
+		res.status(200).send(req.session.user);
 	} else {
-	  res.status(401).send("Unauthorized");
+		res.status(401).send("Unauthorized");
 	}
+});
 
-  });
-  
-  app.get("/auth/logout", (req, res) => {
+app.get("/auth/logout", (req, res) => {
 	req.session.destroy();
 	res.redirect(process.env.REACT_APP_REDIRECT);
-  });
-  //end of session logging
+});
+//end of session logging
 
 app.get("/api/memberprivs", mc.getMemberPrivs);
 app.get("/api/member", gc.getMember);
@@ -117,7 +121,6 @@ app.post("/api/orderheader", mc.addOrderHeader);
 app.post("/api/orderdetail", mc.addOrderDetail);
 
 //end of session logging
-
 
 app.listen(SERVER_PORT, () => {
 	console.log(`Server evesdropping on port ${SERVER_PORT}.`);
