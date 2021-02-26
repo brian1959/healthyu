@@ -51,7 +51,7 @@ app.get("/auth/callback", async (req, res) => {
 		client_secret: CLIENT_SECRET,
 		code: req.query.code,
 		grant_type: "authorization_code",
-		redirect_uri: `http://${req.headers.host}/auth/callback`,
+		redirect_uri: `https://${req.headers.host}/auth/callback`,
 	};
 	//trade the code for a token
 	try {
