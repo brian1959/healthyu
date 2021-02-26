@@ -1,5 +1,5 @@
 {
-	"name": "healthyu",
+	"name": "HealthyU2",
 	"version": "0.1.0",
 	"private": true,
 	"main": "server/server.js",
@@ -14,7 +14,7 @@
 		"express-session": "^1.17.1",
 		"http-proxy-middleware": "0.19.0",
 		"json-loader": "^0.5.7",
-		"massive": "^5.2.0",
+		"massive": "^6.6.5",
 		"moment": "^2.26.0",
 		"nodemailer": "^6.4.8",
 		"npm-run-all": "^4.1.5",
