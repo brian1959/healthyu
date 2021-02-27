@@ -12,7 +12,7 @@ function Home() {
        const getHomeMeals=() =>{ axios.get("/api/homemeals").then(response => {setMealtypedata(response.data) });
       };
 
-        const getLoginData = () => {axios.get("/api/member").then(response => {setLogdin(response.data? true:false) });
+        const getLoginData = () => {axios.get("/api/member").then(response => {setLogdin(response.data[0]? true:false) });
 };
    
        useEffect(() => {
