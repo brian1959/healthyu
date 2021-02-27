@@ -73,7 +73,7 @@ export default class Level50 extends Component {
       </div>
     );
   } else {
-    return <div className="unauthorized">Unauthorized Access</div>; 
+    return <div className="unauthorized">Page Reserved for Clients<br/>To view this and other instructive pages, create an account and purchase access to the pages you desire.<br/>  Please visit our <a href="healthyu2.com">home</a> page to learn more.</div>; 
   }
   }
 }
