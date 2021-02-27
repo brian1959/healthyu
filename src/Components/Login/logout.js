@@ -6,9 +6,9 @@ const LogoutButton = () => {
   const { logout } = useAuth0();
 
   return (
-    <button className="login-button" onClick={() => logout({ returnTo:`http://google.com`})}>
+    <div className="login-btn" onClick={() => logout({ returnTo:`http://google.com`})}>
       Log Out
-    </button>
+    </div>
   );
 };
 

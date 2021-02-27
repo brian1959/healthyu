@@ -8,7 +8,7 @@ import axios from "axios";
 import onClickOutside from "react-onclickoutside";
 import Mpitems from "./mpitems";
 import Logout from "../Login/logout";
-import login from "../Login/login";
+
 
 class Navbar extends Component {
   constructor(props) {
@@ -33,7 +33,7 @@ class Navbar extends Component {
   }
 
   showMenu() {
-    let menuBtn = document.querySelector(".menu-btn");
+    const menuBtn = document.querySelector(".menu-btn");
     this.setState({
       menuShow: !this.state.menuShow,
     });
@@ -166,7 +166,7 @@ class Navbar extends Component {
                       key={mp.detailid}
                       mpName = {mp.puritem}
                       mpLink = {mp.mtlinkname}
-                      showMenu = {this.showMenu}
+                      showMenu = {this.showMenu}               
                     />
                     ) )}
             </div>
