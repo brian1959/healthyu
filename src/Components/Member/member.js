@@ -43,13 +43,13 @@ class Profile extends Component {
       mlastname,
       memail
     } = member;
-
+    const fullName = mfirstname?`${mfirstname} ${mlastname}`:''
     return (
       <div className="member-wrapper">
         <div className="member-details-wrapper">
           <section className="profile-holder">
            <div className="profile-name">
-              {`${mfirstname} ${mlastname}`}
+           {fullName}
             </div>
 
               <div className="profile-item"> {memail}</div>
