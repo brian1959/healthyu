@@ -6,7 +6,9 @@ import tagline from "../../images/hutagline.png";
 import Login from "../Login/login";
 import axios from "axios";
 import onClickOutside from "react-onclickoutside";
-import Mpitems from "./mpitems"
+import Mpitems from "./mpitems";
+import Logout from "../Login/logout";
+import login from "../Login/login";
 
 class Navbar extends Component {
   constructor(props) {
@@ -50,7 +52,7 @@ class Navbar extends Component {
   }
 
   render() {
-
+    const Lgstch = this.state.mypurchases?<Logout/>:<Login/>
     return (
       <div>
         <div className="navbar fixed-top">
@@ -61,8 +63,9 @@ class Navbar extends Component {
               <img className="c-tag" src={tagline} alt="tag line" />
             </div>
             <div className="login-box">
-            <Login/>
+           { Lgstch}
             </div>
+
             <div className="menu-box">
               <div className="menu-items-holder">
                 <div className="menu-btn" onClick={() => this.showMenu()}>
