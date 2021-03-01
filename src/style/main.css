@@ -828,6 +828,11 @@ nav {
     align-items: center;
   }
 
+  .landing-herovid {
+    width: 90%;
+    height:200px;
+  }
+
   .landing-hero-img {
     visibility: visible;
     height: 110px;
@@ -1141,6 +1146,8 @@ nav {
 
   .landing-herovid{
     margin-bottom: 20px;
+    width:90%;
+    height:360px;
   }
 
   .login-box{
@@ -1376,6 +1383,11 @@ margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .landing-herovid {
+    width: 90%;
+    height:520px;
   }
 
   .login-btn{
@@ -1664,6 +1676,7 @@ margin-top: 10px;
   .landing-herovid {
     margin-top: 10px;
     margin-bottom: 20px;
+    height:540px;
   }
   
   .login-box{

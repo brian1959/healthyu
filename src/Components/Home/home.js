@@ -26,7 +26,9 @@ function Home() {
         <div className="landing-hero">
           <div className="landing-herovid">
           <iframe
-                  title="Welcome"
+                 width="95%"
+                 height="95%"
+                 title="Welcome"
                    src="https://drive.google.com/file/d/1Agkpz2NNJrhbT6ULsSJRxh1ioSS7ZokT/preview?start=1" allow="fullscreen" />
           </div>
           <img src="https://nutritionstudies.org/images/graduate-badge.png" width="150" alt="Grad Badge"/>
