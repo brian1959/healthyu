@@ -40,7 +40,7 @@ function Home() {
             topics from the best in plant based research. For those of you who
             lead busy lives, I have taken everything I’ve learned from my 12+
             years of studying the science of plant based nutrition and my plant
-            based nutrition certification and have created multiple video
+            based nutrition certification from <strong>eCornell</strong> and have created multiple video
             series’ on every topic imaginable! This main page is for those
             wanting to learn more about the science behind plant based
             nutrition. The ‘Picky Eaters’ page is for individuals seeking
