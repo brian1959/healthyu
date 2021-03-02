@@ -14,7 +14,7 @@ export default class Vegan extends Component {
           <div className="inst-vids-container">
             <div className="inst-vids-wrapper">
               <div className="snk-vids">
-                <iframe  title="Vegan" src="https://drive.google.com/file/d/1FDA5Vxt0rpTrczuzZMH-mLx2_xx-FGeh/preview"/><h2>Eat Plant Based and Keep your Friends</h2>
+                <iframe width="100%" height="150%" title="Vegan" src="https://drive.google.com/file/d/1FDA5Vxt0rpTrczuzZMH-mLx2_xx-FGeh/preview" allow="fullscreen; autoplay"/><br/><br/><h2>Eat Plant Based and Keep your Friends</h2>
                 
             
             </div>
