@@ -105,7 +105,15 @@ class Navbar extends Component {
                   className="navbar-column-link"
                   onClick={() => this.showMenu()}
                 >
-                  Immune
+                  Protect your Health
+                </div>
+              </Link>
+              <Link to="/vegan">
+                <div
+                  className="navbar-column-link"
+                  onClick={() => this.showMenu()}
+                >
+                  The Lonely Vegan
                 </div>
               </Link>
             </div>
