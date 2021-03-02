@@ -19,3 +19,4 @@ VALUES
 ('Men','', 'In this video, I cover a range of health issues specific to men and what the research is saying about how eating a WFPB diet can help you avoid chronic conditions and perform at your best.',10, '$10', 'Men', false, true),
 ('Women','', 'As women, it is so important we make our health a priority so we can manage our vast and varied responsibilities. This video reviews the whys and hows of doing just that!',10, '$10', 'women', false, true),
 ('Meal prep recipes/videos and favorite links','', 'Includes 16 videos and dozens of recipes as well as links to additional recipes',40,'$40','Recipe', false, true);
+('The Lonely Vegan','', 'I created this video to help those of you who are the only plant-based eaters in your home or circle of friends/family.  I am too!  This free video gives you tips about how to foster healthy relationships while changing your eating habits.',0,'Free','Vegan', true, false);
