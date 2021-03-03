@@ -17,19 +17,29 @@ export default class Immune extends Component {
           <div className="inst-vids-container">
             <div className="inst-vids-wrapper">
               <div className="snk-vids">
-               <iframe  title="Habits that Weaken" src="https://drive.google.com/file/d/188zqvmz6F9SVvtA_t5JW7fXFWJUEJ28m/preview" allow="fullscreen"/><h2>Habits that Weaken our Immune System</h2>
+                <div className="iframe-holder">
+               <iframe width="100%" height="100%"  title="Habits that Weaken" src="https://drive.google.com/file/d/188zqvmz6F9SVvtA_t5JW7fXFWJUEJ28m/preview" allow="fullscreen"/> </div><br/>
+               <h2>Habits that Weaken our Immune System</h2>
                 
               </div>
               <div className="snk-vids">
-               <iframe  title="Habits that Strengthen" src="https://drive.google.com/file/d/1QhyYiNDGng_p39XC98cDWp6pwlY3sToD/preview" allow="fullscreen"/><h2>Habits that Strengthen our Immune System</h2>
+                <div className="iframe-holder">
+                <iframe width="100%" height="100%" title="Habits that Strengthen" src="https://drive.google.com/file/d/1QhyYiNDGng_p39XC98cDWp6pwlY3sToD/preview" allow="fullscreen"/>
+                </div><br/>
+<h2>Habits that Strengthen our Immune System</h2>
                 
               </div>
               <div className="snk-vids">
-                <iframe  title="Foods that Weaken" src="https://drive.google.com/file/d/1wFSTM6ctPqeTfYZ_28DqQzacE3GkKckr/preview" allow="fullscreen"/> <h2>Food that weaken our Immune System</h2>
+                <div className="iframe-holder">
+                <iframe width="100%" height="100%"  title="Foods that Weaken" src="https://drive.google.com/file/d/1wFSTM6ctPqeTfYZ_28DqQzacE3GkKckr/preview" allow="fullscreen"/> </div><br/>
+                <h2>Foods that weaken our Immune System</h2>
                
               </div>
               <div className="snk-vids">
-                <iframe  title="Foods that Strengthen" src="https://drive.google.com/file/d/1Q9evaEf9PLMBTJFpDAqmXmcTQ5PP_ecH/preview" allow="fullscreen"/><h2>Foods that strengthen our Immune System</h2>
+                <div className="iframe-holder">
+                <iframe width="100%" height="100%"  title="Foods that Strengthen" src="https://drive.google.com/file/d/1Q9evaEf9PLMBTJFpDAqmXmcTQ5PP_ecH/preview" allow="fullscreen"/>
+                </div><br/>
+                <h2>Foods that strengthen our Immune System</h2>
                 
               </div>
             </div>
