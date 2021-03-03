@@ -34,9 +34,10 @@ export default class Foryourfamily extends Component {
           <div className="inst-vids-container">
             <div className="inst-vids-wrapper">
               <div className="snk-vids">
-                <iframe  
+              <div className="iframe-holder">
+                <iframe  width="100%" height="100%" 
                 title="For Your Family"
-src="https://drive.google.com/file/d/1vucBXRHYpd0H1fvqYsfLSUPBND8kZi_P/preview" allow="fullscreen" />
+                src="https://drive.google.com/file/d/1vucBXRHYpd0H1fvqYsfLSUPBND8kZi_P/preview" allow="fullscreen" /></div><br/>
                 <h2>Circadian Rhythms</h2>
               </div>
             </div>

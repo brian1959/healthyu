@@ -37,9 +37,11 @@ export default class Autoimmune extends Component {
           <div className="inst-vids-container">
             <div className="inst-vids-wrapper">
               <div className="snk-vids">
+              <div className="iframe-holder">
                 <iframe
                 title="Autoimmune"
-                  src="https://drive.google.com/file/d/1m6NI7aR8lriUnLTQJEHIpIgKL2AkAMls/preview" allow="fullscreen"/>          
+                width="100%" height="100%" 
+                  src="https://drive.google.com/file/d/1m6NI7aR8lriUnLTQJEHIpIgKL2AkAMls/preview" allow="fullscreen"/> </div><br/>         
                 <h2>Autoimmune Disorders</h2>
               </div>
             </div>

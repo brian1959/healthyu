@@ -37,7 +37,9 @@ export default class Men extends Component {
           <div className="inst-vids-container">
             <div className="inst-vids-wrapper">
               <div className="snk-vids">
-                <iframe title="Men" src="https://drive.google.com/file/d/1m5lfuyRoJADbe5kVE8xUTWSy0suxQOSn/preview"/> 
+              <div className="iframe-holder">
+                <iframe width="100%" height="100%" title="Men" src="https://drive.google.com/file/d/1m5lfuyRoJADbe5kVE8xUTWSy0suxQOSn/preview"/> 
+                </div><br/>
                 <h2>Make Health a Priority</h2>
               </div>
               </div>
