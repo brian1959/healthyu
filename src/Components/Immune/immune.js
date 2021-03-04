@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class Immune extends Component {
   render() {
-    document.title = "Immune";
+    document.title = "HealthyU2 | Protect your Health";
     return (
       <div className="nibble-main">
         <div className="meal-title-wrapper">

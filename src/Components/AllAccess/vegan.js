@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class Vegan extends Component {
   render() {
-    document.title = "The Lonely Vegan";
+    document.title = "HealthyU2 | The Lonely Vegan";
     return (
       <div className="nibble-main">
         <div className="meal-title-wrapper">

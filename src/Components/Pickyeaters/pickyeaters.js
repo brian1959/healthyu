@@ -29,7 +29,7 @@ export default class Pickyeaters extends Component {
 
 
   componentDidMount() {
-    document.title = "Picky Eaters";
+    document.title = "HealthyU2 | Picky Eaters";
 
     
     axios.get("/api/accessprivs").then(purchases => {
@@ -106,7 +106,7 @@ export default class Pickyeaters extends Component {
   }
 
   render() {
-
+ 
     return (
       <div className="nibble-main">
         <div className="meal-title-wrapper">

@@ -3,7 +3,7 @@ import "./free.css";
 
 export default class Free extends Component {
   render() {
-    document.title = "Free Resources";
+    document.title = "HealthyU2 | Free Resources";
     return (
       <div className="free-body">
         <div className="free-title">Free Resources</div>

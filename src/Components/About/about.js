@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class About extends Component {
   render() {
-    document.title = "About Healthy U";
+    document.title = "About HealthyU2";
     return (
       <div className="about-main">
         <section className="about-header">

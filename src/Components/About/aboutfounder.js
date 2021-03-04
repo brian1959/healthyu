@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class About extends Component {
   render() {
-    document.title = "About Our Founder";
+    document.title = "HealthyU2 | About Our Founder";
     return (
       <div className="about-main">
         <div className="about-main-title">Kandis Mortensen</div>
