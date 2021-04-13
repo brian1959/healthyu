@@ -24,7 +24,13 @@ function Home() {
     return (
       <div className="landing">
         <div className="landing-hero">
-
+          <div className="landing-herovid">
+          <iframe
+                 width="95%"
+                 height="95%"
+                 title="Welcome"
+                   src="https://drive.google.com/file/d/1Agkpz2NNJrhbT6ULsSJRxh1ioSS7ZokT/preview?start=1" allow="fullscreen; autoplay" />
+          </div>
           <img src="https://nutritionstudies.org/images/graduate-badge.png" width="150" alt="Grad Badge"/>
           <div className="overlay-promo">Eat your way to a better life</div>
           <div className="overlay-promo-text">
