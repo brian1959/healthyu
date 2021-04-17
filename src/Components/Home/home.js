@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import MealType from './mealitem';
+
 import axios from 'axios'
 
 
@@ -24,8 +25,10 @@ function Home() {
     return (
       <div className="landing">
         <div className="landing-hero">
-
-          <img src="https://nutritionstudies.org/images/graduate-badge.png" width="150" alt="Grad Badge"/>
+       
+<img src='../../../images/fruits.jpg' width="350" alt='fruits and veggies' />
+   
+         
           <div className="overlay-promo">Eat your way to a better life</div>
           <div className="overlay-promo-text">
             Welcome to the HealthyU2 website! This site was created to help you
@@ -44,7 +47,7 @@ function Home() {
             and those over 50. I’m so happy you stopped by! I'm thrilled to help
             you discover life-changing information in small bites!
           </div>
-        
+          <img src="https://nutritionstudies.org/images/graduate-badge.png" width="150" alt="Grad Badge"/>
         </div>
         <section className="land-meal-type">
           <div className="prep-title">How hungry are you?</div>
