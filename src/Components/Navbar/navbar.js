@@ -116,6 +116,14 @@ class Navbar extends Component {
                   The Lonely Vegan
                 </div>
               </Link>
+              <Link to="//coaching">
+                <div
+                  className="navbar-column-link"
+                  onClick={() => this.showMenu()}
+                >
+                  Nutrition Coaching
+                </div>
+              </Link>
             </div>
             <div className="navbar-column-link-box">
               <div className="navbar-column-title">About Us</div>

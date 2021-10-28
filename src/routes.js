@@ -37,7 +37,7 @@ export default (
     <Route path="/feast" component={Feast} />
     <Route path="/immune" component={Immune} />
     <Route path="/nibble" component={Nibble} />
-    <Route path="/nutrition" component={NutritionCoaching} />
+    <Route path="/coaching" component={NutritionCoaching} />
     <Route path="/resources" component={Free}/>
     <Route path="/slv" component={SLV}/>
     <Route path="/snack" component={Snack} />

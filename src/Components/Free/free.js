@@ -142,6 +142,21 @@ export default class Free extends Component {
           </div>
         </div>
         <div className="free-group">
+          <div className="free-group-title"> Diabetes</div>
+          <br />
+          <div className="free-text">
+            <a href="https://www.amazon.com/Mastering-Diabetes-Revolutionary-Permanently-Prediabetes/dp/059318999X/ref=sr_1_1?crid=1DNBWYQXEHEPP&keywords=mastering+diabetes&qid=1583179959&s=books&sprefix=mastering%2Cstripbooks%2C223&sr=1-1">
+              (Book) Mastering Diabetes by Cyrus Khambatta Robby Barbaro
+            </a>
+            <br />
+            <a href ="https://www.youtube.com/user/mindfuldiabeticrobby">Mastering Diabetes Youtube Channel</a>  
+            <br />
+            <a href=":https://nutritionfacts.org/?s=diabetes">Nutritionfacts.org</a> has a HUGE database on how foods affect diabetes.
+            <br />
+            <a href="https://www.youtube.com/watch?v=tAiXvrIMIIE">PCRM info on diabetes</a>
+          </div>
+        </div>
+        <div className="free-group">
           <div className="free-group-title"> Medical Issues</div>
           <br />
           <div className="free-text">
@@ -154,11 +169,6 @@ export default class Free extends Component {
             <a href="https://books.google.com/books/about/Prevent_and_Reverse_Heart_Disease.html?id=ocSMDQAAQBAJ&source=kp_book_description">
               (Book) Dr. Caldwell Esselstyn Prevent and Reverse Heart Disease:
               The Revolutionary, Scientifically Proven, Nutrition-Based Cure
-            </a>
-            <br />
-            Help for Diabetes:
-            <a href="https://www.amazon.com/Mastering-Diabetes-Revolutionary-Permanently-Prediabetes/dp/059318999X/ref=sr_1_1?crid=1DNBWYQXEHEPP&keywords=mastering+diabetes&qid=1583179959&s=books&sprefix=mastering%2Cstripbooks%2C223&sr=1-1">
-              (Book) Mastering Diabetes by Cyrus Khambatta Robby Barbaro
             </a>
             <br />
             Help for Prostate Cancer:
