@@ -70,26 +70,6 @@ export default class Free extends Component {
           </div>
         </div>
         <div className="free-group">
-          <div className="free-group-title">Dr. Pam Popper</div>
-          <br />
-          <div className="free-text">
-            <a href="https://www.amazon.com/Food-Over-Medicine-Conversation-Could/dp/1940363756/ref=sr_1_1?crid=3GAJJQV0EQ3NJ&keywords=food+over+medicine+pam+popper&qid=1583179714&s=books&sprefix=food+over+me%2Cstripbooks%2C185&sr=1-1">
-              (Book) Dr. Food over Medicine
-            </a>
-            Nearly half of Americans take at least one prescription medicine,
-            with almost a quarter taking three or more, as diseases such as
-            diabetes, obesity, and dementia grow more prevalent than ever. The
-            problem with medicating common ailments, such as high blood pressure
-            or elevated cholesterol, is that drugs treat symptoms—and may even
-            improve test results—without addressing the cause: diet.
-            <br />
-            <br />
-            <a href="https://www.youtube.com/user/drpamsnewschannel">
-              (On-line video) Dr. Pam Popper's youtube channel
-            </a>
-          </div>
-        </div>
-        <div className="free-group">
           <div className="free-group-title">Dr. T. Collin Campbell</div>
           <br />
           <div className="free-text">

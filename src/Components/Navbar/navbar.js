@@ -116,7 +116,7 @@ class Navbar extends Component {
                   The Lonely Vegan
                 </div>
               </Link>
-              <Link to="//coaching">
+              <Link to="/coaching">
                 <div
                   className="navbar-column-link"
                   onClick={() => this.showMenu()}
