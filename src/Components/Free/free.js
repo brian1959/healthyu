@@ -172,6 +172,39 @@ export default class Free extends Component {
           </div>
         </div>
         <div className="free-group">
+          <div className="free-group-title">Hormonal Health for Women</div>
+          <br />
+          <div className="free-text">
+            Hormones:
+            <a href="https://www.youtube.com/watch?v=0s5vzsabNpI">
+              (Youtube Video) PCRM on how foods affect hormones
+            </a>
+            <br />
+           Menopause:
+            <a href=" https://www.youtube.com/watch?v=8uDc9ILdhxY&t=3s">
+              (Youtube Video) PCRM on how food affects menopause
+            </a>
+            <br />
+            Food and Fertility:
+            <a href=" https://www.youtube.com/watch?v=rlLB8fdCJgo">
+              (Youtube Video) How a Plant-Based Diet Affects Fertility
+            </a>
+            <a href="https://www.youtube.com/watch?v=Zjjg9HW0Gx8">
+              (Youtube Video) Foods That Affect Fertility
+            </a>
+            <br />
+            PCOS:
+            <a href="https://www.youtube.com/watch?v=yL1RXBxBByQ">
+              (On-line Video) How foods affect PCOS
+            </a>
+            <br />
+            Periods
+            <a href="https://www.youtube.com/watch?v=xJrvuhlGcak&t=3s">
+              (Youtube Video)Painful periods 
+            </a>
+          </div>
+        </div>
+        <div className="free-group">
           <div className="free-group-title">
             Teaching Kids about healthy eating
           </div>
