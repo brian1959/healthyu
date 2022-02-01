@@ -694,7 +694,7 @@ nav {
   }
 
   .about-main-text {
-    font-size: 18px;
+    font-size: 22px;
     text-align: center;
     font-weight: 400;
     line-height: 1.5;
@@ -702,7 +702,7 @@ nav {
   }
 
   .about-main-title {
-    margin: 5px 0 20px 0;
+    margin: 25px 0 20px 0;
     font-size: 50px;
     font-weight: 400;
     text-align: center;
@@ -865,6 +865,7 @@ nav {
   
   .meal-text {
     font-weight: 300;
+    font-size: 1.4rem;
     margin: 0 15px 20px 15px;
   }
 
@@ -875,7 +876,7 @@ nav {
   }
 
   .menu-btn {
-    margin-top: 10px;
+    margin-top: 16px;
   }
 
   .menu-btn .btn-line {
@@ -899,8 +900,8 @@ nav {
   }
 
   .menu-header-word {
-    margin-top: 8px;
-    font-size: 14px;
+    margin-top: 14px;
+    font-size: 16px;
     font-weight: bold;
   }
 
@@ -916,7 +917,7 @@ nav {
 
   .navbar {
     flex-direction: column;
-    height: 80px;
+    height: 100px;
   }
 
   .navbar-header-links {
@@ -958,7 +959,7 @@ nav {
     color: #333;
     line-height: 1.5;
     margin: 15px 5%;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
   }
 
@@ -1091,7 +1092,7 @@ nav {
     text-align: center;
   }
   .about-main-text {
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
     font-weight: 400;
     line-height: 1.5;
@@ -1487,7 +1488,7 @@ margin-top: 10px;
   .overlay-promo-text {
     line-height: 1.5;
     margin: 15px 15%;
-    font-size: 18px;
+    font-size: 22px;
     color: #333;
   }
 
