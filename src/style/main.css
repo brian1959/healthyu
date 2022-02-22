@@ -616,7 +616,7 @@ nav {
 
 .prep-text {
   width: 300px;
-  font-size: 16px;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 
@@ -657,7 +657,14 @@ nav {
 }
 
 @media (min-width: 276px) {
+
+  .aatext{
+    font-size: 1.3rem;
+  }
    
+  .aatitle {
+    font-size: 1.3rem;
+  }
   .about-expo-feature-box {
     display: flex;
     flex-direction: column;
@@ -676,6 +683,9 @@ nav {
     margin-bottom: 30px;
   }
 
+  .cst {
+    font-size: 1.5rem;
+  }
   .about-image {
     border-radius: 50%;
     height: 220px;
@@ -729,19 +739,19 @@ nav {
   }
 
   .c-company{
-    width: 120px;
-    height:30px;
+    width: 160px;
+    height:40px;
   }
 
   .c-tag{
-   height: 30px;
+   height: 40px;
    visibility: visible;
   }
 
   .c-logo {
     margin: 10px 10px 5px 0;
-    height: 50px;
-    width: 50px;
+    height: 70px;
+    width: 70px;
   }
 
   .company-container {
@@ -787,7 +797,7 @@ nav {
   }
 
   .login-button{
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 400;
     background-color: royalblue;
     color: white;
@@ -803,7 +813,7 @@ nav {
   }
 
   .header-spacer {
-    height: 80px;
+    height: 150px;
   }
 
   .inst-vids {
@@ -876,12 +886,12 @@ nav {
   }
 
   .menu-btn {
-    margin-top: 16px;
+    margin-top: 10px;
   }
 
   .menu-btn .btn-line {
     width: 15px;
-    height: 1.5px;
+    height: 1.8px;
   }
 
   .menu-box {
@@ -900,8 +910,8 @@ nav {
   }
 
   .menu-header-word {
-    margin-top: 14px;
-    font-size: 16px;
+    margin-top: 5px;
+    font-size: 22px;
     font-weight: bold;
   }
 
@@ -911,13 +921,13 @@ nav {
     display: flex;
     flex-direction: row;
     cursor: pointer;
-    padding-left: 60px;
-    margin-right: 10px;
+    padding-left: 10px;
+    margin-right: 40px;
   }
 
   .navbar {
     flex-direction: column;
-    height: 100px;
+    height: 150px;
   }
 
   .navbar-header-links {
@@ -994,7 +1004,7 @@ nav {
 
   .prep-text > p {
     margin:0 15px;
-    font-size: 16px;
+    font-size: 1.5 rem;
     text-align: center;
   }
 
@@ -1044,12 +1054,13 @@ nav {
 @media(min-width:333px){
   
   .login-btn{
-    font-size: 18px;
+    font-size: 22px;
   }
 
   .menu-items-holder{
     margin-right: 0;
-    padding-left: 80px;
+    margin-top: 5px;
+    padding-left: 30px;
   } 
   
   .prep-text > p {
@@ -1351,6 +1362,10 @@ nav {
 
   .companywrapper {
 margin-top: 10px;
+  }
+
+  .cst {
+    font-size: 1.2rem;
   }
 
   .digdeeper-text {
